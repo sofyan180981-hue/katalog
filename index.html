@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Yusuf_Store 25 - Pusat sepatu kualitas import, sepatu lokal original, dan kaos berkualitas di Padang Sidimpuan. Lokasi depan Tugu Salak.">
-    <meta name="keywords" content="sepatu import padang sidimpuan, sepatu lokal original, toko sepatu tugu salak, kaos berkualitas sidimpuan, yusuf_store 25">
+    <meta name="description" content="Yusuf_Store 25 - Pusat sepatu Nike, Adidas, Onitsuka, NB, On Cloud, Puma, Ortus, 910, Skechers, Hoka, Asics di Padang Sidimpuan.">
+    <meta name="keywords" content="sepatu import padang sidimpuan, nike sidimpuan, adidas sidimpuan, hoka sidimpuan, on cloud indonesia, yusuf_store 25">
     <meta name="author" content="Yusuf_Store 25">
     
-    <title>Yusuf_Store 25 - Gaya Keren, Harga Bersahabat</title>
+    <title>Yusuf_Store 25 - Brand Ternama & Kualitas Import</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -62,7 +62,6 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Badge Warna Kategori */
         .badge-running { background: #dcfce7; color: #166534; }
         .badge-casual { background: #e0f2fe; color: #075985; }
         .badge-futsal { background: #fef9c3; color: #854d0e; }
@@ -72,6 +71,33 @@
             background: linear-gradient(to right, #60a5fa, #ffffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* Styling Brand Logo Grid */
+        .brand-logo-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            height: 120px;
+        }
+
+        .brand-logo-card:hover {
+            transform: scale(1.05);
+            border-color: #2563eb;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+        }
+
+        .brand-logo-card img {
+            max-width: 95%;
+            max-height: 60px;
+            object-fit: contain;
+            margin-bottom: 8px;
         }
 
         @keyframes fadeIn {
@@ -94,15 +120,14 @@
                     <h1 class="text-lg font-extrabold tracking-tighter uppercase">YUSUF_STORE <span class="text-blue-600">25</span></h1>
                 </div>
             </div>
-            <!-- Link Chat Admin -->
             <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20ingin%20tanya%20stok%20produk" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full font-bold flex items-center gap-2 hover:bg-green-700 transition shadow-md text-[10px] uppercase">
                 <i class="fab fa-whatsapp"></i> Chat Admin
             </a>
         </div>
     </nav>
 
-    <!-- Banner Dengan Slogan & Keterangan Kualitas -->
-    <header class="bg-slate-950 text-white py-16 md:py-28 text-center relative overflow-hidden">
+    <!-- Banner -->
+    <header class="bg-slate-950 text-white py-16 md:py-24 text-center relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
             <div class="flex justify-center mb-6">
                 <img src="1000108714.jpg" alt="Logo Utama" class="h-28 md:h-36 w-auto rounded-3xl border-2 border-blue-500/30 shadow-2xl" onerror="this.style.display='none'">
@@ -110,41 +135,106 @@
             <h2 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tighter italic">
                 YUSUF_STORE <span class="text-blue-500">25</span>
             </h2>
-            
-            <!-- SLOGAN UTAMA -->
-            <p class="text-lg md:text-2xl font-bold slogan-text italic mb-6">
+            <p class="text-lg md:text-2xl font-bold slogan-text italic mb-10">
                 "Langkah Pasti, Gaya Masa Kini"
             </p>
-
-            <!-- KETERANGAN KUALITAS PRODUK -->
-            <div class="flex flex-wrap justify-center gap-4 mb-8">
-                <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
-                    <i class="fas fa-globe-americas text-blue-400 text-xs"></i>
-                    <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">Sepatu Kualitas Import</span>
-                </div>
-                <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
-                    <i class="fas fa-certificate text-yellow-400 text-xs"></i>
-                    <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">Sepatu Lokal Original</span>
-                </div>
-                <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
-                    <i class="fas fa-tshirt text-blue-400 text-xs"></i>
-                    <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">Kaos Berkualitas</span>
-                </div>
-            </div>
             
             <div class="flex items-center justify-center gap-2 text-slate-400 font-bold tracking-[0.2em] text-[10px] uppercase">
                 <i class="fas fa-map-marker-alt text-blue-500"></i> Depan Tugu Salak - Padang Sidimpuan
             </div>
         </div>
-        
-        <!-- Dekorasi Background -->
-        <div class="absolute inset-0 opacity-20 pointer-events-none">
-            <div class="absolute top-0 left-0 w-80 h-80 bg-blue-600 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-900 rounded-full blur-[120px]"></div>
-        </div>
     </header>
 
-    <!-- Filter Bar -->
+    <!-- Logo Brand Ternama (Bisa Dirubah Sendiri) -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-[10px] font-bold text-blue-600 uppercase tracking-[0.4em] mb-10">Koleksi Brand Resmi</h3>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+                
+                <!-- CARA GANTI: Ganti tulisan di src="..." dengan nama file .jpg Bapak -->
+                
+                <!-- Brand 1: Nike -->
+                <div class="brand-logo-card">
+                    <img src="logo_nike.jpg" alt="Nike" onerror="this.src='https://via.placeholder.com/150x80?text=NIKE';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">NIKE</span>
+                </div>
+
+                <!-- Brand 2: Adidas -->
+                <div class="brand-logo-card">
+                    <img src="logo_adidas.jpg" alt="Adidas" onerror="this.src='https://via.placeholder.com/150x80?text=ADIDAS';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">ADIDAS</span>
+                </div>
+
+                <!-- Brand 3: New Balance -->
+                <div class="brand-logo-card">
+                    <img src="logo_nb.jpg" alt="New Balance" onerror="this.src='https://via.placeholder.com/150x80?text=NEW+BALANCE';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">New Balance</span>
+                </div>
+
+                <!-- Brand 4: Puma -->
+                <div class="brand-logo-card">
+                    <img src="logo_puma.jpg" alt="Puma" onerror="this.src='https://via.placeholder.com/150x80?text=PUMA';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">PUMA</span>
+                </div>
+
+                <!-- Brand 5: Hoka -->
+                <div class="brand-logo-card">
+                    <img src="logo_hoka.jpg" alt="Hoka" onerror="this.src='https://via.placeholder.com/150x80?text=HOKA';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">HOKA</span>
+                </div>
+
+                <!-- Brand 6: Ortus Eight -->
+                <div class="brand-logo-card">
+                    <img src="logo_ortus.jpg" alt="Ortus" onerror="this.src='https://via.placeholder.com/150x80?text=ORTUS';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">EIGHT</span>
+                </div>
+
+		<!-- Brand 7: Specs -->
+                <div class="brand-logo-card">
+                    <img src="logo_specs.jpg" alt="Specs" onerror="this.src='https://via.placeholder.com/150x80?text=SPECS';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">SPECS</span>
+                </div>
+
+                <!-- Brand 8: 910 Nineten -->
+                <div class="brand-logo-card">
+                    <img src="logo_910.jpg" alt="910" onerror="this.src='https://via.placeholder.com/150x80?text=910';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">NINETEN</span>
+                </div>
+
+                <!-- Brand 9: On Cloud -->
+                <div class="brand-logo-card">
+                    <img src="logo_oncloud.jpg" alt="910" onerror="this.src='https://via.placeholder.com/150x80?text=910';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">ON CLOUD</span>
+                </div>
+
+                <!-- Brand 10: Asics -->
+                <div class="brand-logo-card">
+                    <img src="logo_Asics.jpg" alt="910" onerror="this.src='https://via.placeholder.com/150x80?text=910';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">ASICS</span>
+                </div>
+
+                <!-- Brand 11: Skechers -->
+                <div class="brand-logo-card">
+                    <img src="logo_Skechers.jpg" alt="910" onerror="this.src='https://via.placeholder.com/150x80?text=910';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">SKECHERS</span>
+                </div>
+
+                <!-- Brand 12: Onitsuka -->
+                <div class="brand-logo-card">
+                    <img src="logo_Onitsuka.jpg" alt="910" onerror="this.src='https://via.placeholder.com/150x80?text=910';">
+                    <span class="text-[9px] font-black tracking-widest text-slate-800 uppercase">ONITSUKA</span>
+                </div>
+
+
+                <!-- Tambahkan Brand Lainnya di bawah ini sesuai pola yang sama -->
+            </div>
+            
+            <p class="mt-8 text-[10px] text-slate-400 italic">Tips: Pastikan file .jpg berada dalam satu folder dengan file index.html ini.</p>
+        </div>
+    </section>
+
+    <!-- Filter & Katalog Tetap Sama -->
     <div class="bg-white border-b sticky top-[60px] z-40 shadow-sm">
         <div class="container mx-auto px-4 py-4 flex gap-2 overflow-x-auto no-scrollbar justify-start md:justify-center">
             <button onclick="filterItems('all')" class="filter-btn active px-6 py-2 rounded-xl border border-slate-200 font-bold text-xs uppercase tracking-widest transition">Semua</button>
@@ -155,35 +245,27 @@
         </div>
     </div>
 
-    <!-- Katalog Produk -->
     <section class="py-12">
         <div class="container mx-auto px-4">
-            <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
-                <!-- Produk Otomatis Disini -->
-            </div>
+            <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8"></div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-950 text-white py-16 border-t border-slate-900">
         <div class="container mx-auto px-4 text-center">
             <h3 class="text-xl font-bold mb-2 uppercase">YUSUF_STORE 25</h3>
-            <p class="text-slate-500 text-xs italic mb-8">Pusat Fashion & Sepatu Terlengkap di Padang Sidimpuan</p>
+            <p class="text-slate-500 text-xs italic mb-4">Depan Tugu Salak - Padang Sidimpuan</p>
             <p class="text-[9px] tracking-[0.5em] text-slate-800 font-bold uppercase">&copy; 2024 Yusuf_Store 25</p>
         </div>
     </footer>
 
     <script>
-        // DATA PRODUK
         const productData = [
-            { id: 1, name: "Nike Running Pro", cat: "running", img: "sepatu1.jpg" },
-            { id: 2, name: "Adidas Casual Neo", cat: "casual", img: "sepatu2.jpg" },
-            { id: 3, name: "Specs Accelerator Futsal", cat: "futsal", img: "sepatu3.jpg" },
+            { id: 1, name: "Nike Vomero", cat: "running", img: "sepatu1.jpg" },
+            { id: 2, name: "Le Coq ", cat: "casual", img: "sepatu2.jpg" },
+            { id: 3, name: "Nike Pegasus", cat: "running", img: "sepatu3.jpg" },
             { id: 4, name: "Kaos Distro Premium", cat: "kaos", img: "kaos1.jpg" },
-            { id: 5, name: "New Balance 530", cat: "running", img: "sepatu4.jpg" },
-            { id: 6, name: "Puma Suede Classic", cat: "casual", img: "sepatu5.jpg" },
-            { id: 7, name: "Mizuno Morelia Futsal", cat: "futsal", img: "sepatu6.jpg" },
-            { id: 8, name: "Kaos Oversize Y25", cat: "kaos", img: "kaos2.jpg" }
+            { id: 5, name: "Asics Magic Speed", cat: "running", img: "sepatu4.jpg" }
         ];
 
         const grid = document.getElementById('product-grid');
@@ -191,35 +273,23 @@
         function renderProducts(filter = 'all') {
             grid.innerHTML = '';
             const filtered = filter === 'all' ? productData : productData.filter(p => p.cat === filter);
-            
             filtered.forEach(item => {
-                const card = `
+                grid.innerHTML += `
                     <div class="product-card p-3 animate-fade-in">
-                        <div class="relative overflow-hidden rounded-xl">
-                            <img src="${item.img}" alt="${item.name}" class="product-image" onerror="this.src='https://via.placeholder.com/400x400?text=Yusuf+Store+25';">
-                        </div>
+                        <img src="${item.img}" class="product-image" onerror="this.src='https://via.placeholder.com/400x400?text=Produk';">
                         <div class="mt-4">
                             <span class="text-[9px] font-extrabold uppercase px-2 py-0.5 rounded badge-${item.cat}">${item.cat}</span>
-                            <h3 class="font-bold text-sm text-slate-800 leading-tight mt-1 mb-4 h-10 overflow-hidden line-clamp-2">${item.name}</h3>
-                            <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20tertarik%20dengan%20produk:%20${encodeURIComponent(item.name)}" 
-                               target="_blank"
-                               class="w-full flex items-center justify-center gap-2 bg-slate-900 text-white py-2.5 rounded-xl font-bold text-xs hover:bg-blue-600 transition active:scale-95 shadow-sm">
-                                <i class="fab fa-whatsapp text-sm"></i> PESAN SEKARANG
-                            </a>
+                            <h3 class="font-bold text-sm text-slate-800 mt-1 mb-4 h-10 overflow-hidden">${item.name}</h3>
+                            <button class="w-full bg-slate-900 text-white py-2 rounded-xl font-bold text-xs uppercase">Pesan</button>
                         </div>
                     </div>
                 `;
-                grid.innerHTML += card;
             });
         }
 
         function filterItems(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('onclick').includes(`'${category}'`)) {
-                    btn.classList.add('active');
-                }
-            });
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
             renderProducts(category);
         }
 
