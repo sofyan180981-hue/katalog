@@ -21,6 +21,67 @@
             scroll-behavior: smooth;
         }
 
+
+        /* --- EFEK LOGO TOKO --- */
+        .logo-shop-effect {
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+            border: 2px solid rgba(37, 99, 235, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .logo-shop-effect:hover {
+            box-shadow: 0 0 25px rgba(37, 99, 235, 0.6);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Desain Kartu Brand */
+        .brand-logo-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            padding: 15px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 110px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .brand-logo-card:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb;
+            box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.1);
+        }
+
+        .brand-logo-card img {
+            max-width: 85%;
+            max-height: 50px;
+            object-fit: contain;
+            margin-bottom: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .brand-name {
+            font-size: 8px;
+            font-weight: 800;
+            color: #94a3b8;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
         .product-card { 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
             border-radius: 16px; 
@@ -148,7 +209,7 @@
     <!-- Logo Brand Ternama (Bisa Dirubah Sendiri) -->
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4 text-center">
-            <h3 class="text-[10px] font-bold text-blue-600 uppercase tracking-[0.4em] mb-10">Koleksi Brand Resmi</h3>
+            <h3 class="text-[10px] font-bold text-blue-600 uppercase tracking-[0.4em] mb-10">Koleksi Brand Ternama</h3>
             
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
                 
