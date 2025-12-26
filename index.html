@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf Store 25 - Sepatu & Kaos Berkualitas</title>
+    <title>Yusuf_Store 25 - Sepatu & Kaos Berkualitas</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- 1. Meta Deskripsi (Ringkasan untuk Google) -->
-    <meta name="description" content="Yusuf Store 25 - Jual Sepatu Running, Casual & Kaos Original (Nike, Adidas, Hoka). Alamat di Jln. Merdeka Kantin Padang Sidimpuan. Buka 11.00 - 22.30 WIB.">
+    <meta name="description" content="Yusuf_Store 25 - Jual Sepatu Running, Casual & Kaos Original (Nike, Adidas, Hoka). Alamat di Jln. Merdeka Kantin Padang Sidimpuan. Buka 11.00 - 22.30 WIB.">
 
     <!-- 2. Meta Keywords (Kata kunci pencarian) -->
     <meta name="keywords" content="Sepatu High Quality, Sepatu Running, Sepatu Nike, Sepatu Adidas, Toko Sepatu Padang Sidimpuan, Sepatu Hoka, Sepatu Murah, Kaos Lari">
     
     <!-- 3. Open Graph (Agar bagus saat dibagikan di WA/Instagram/FB) -->
-    <meta property="og:title" content="Yusuf Store 25 - Sepatu High Quality, Padang Sidimpuan">
+    <meta property="og:title" content="Yusuf_Store 25 - Sepatu High Quality, Padang Sidimpuan">
     <meta property="og:description" content="Temukan sepatu lari dan casual original. Nike, Adidas, Hoka dan banyak lagi. Lokasi: Padang Sidimpuan.">
     <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/8ec0f45f-aac5-4ba4-892b-e32fc8f76ed2.jpg?auth_key=1866751818-2ee6d09ca25a4f69a7f451317a337325-0-f54c5ad6428b8cd184d7f86e07cb76cf">
     <meta property="og:url" content="https://sofyan180981-hue.github.io/yusufstore25/">
@@ -512,6 +512,41 @@
 </head>
 <body>
 
+<!-- Structured Data untuk Google Maps -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Yusuf Store 25",
+  "image": "https://z-cdn-media.chatglm.cn/files/8ec0f45f-aac5-4ba4-892b-e32fc8f76ed2.jpg?auth_key=1866751818-2ee6d09ca25a4f69a7f451317a337325-0-f54c5ad6428b8cd184d7f86e07cb76cf",
+  "telephone": "6281375861195",
+  "url": "https://www.instagram.com/yusufstore_25", 
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jln. Merdeka - Kantin",
+    "addressLocality": "Padang Sidimpuan",
+    "addressRegion": "Sumatera Utara",
+    "addressCountry": "ID",
+    "postalCode": "22715"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "11:00",
+    "closes": "22:30"
+  },
+  "priceRange": "Rp150.000 - Rp700.000"
+}
+</script>
+
     <!-- Top Bar -->
     <div class="top-bar">
         <span><i class="clock"></i> Jam Operasional: 11.00 WIB - 22.30 WIB</span>
@@ -539,7 +574,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <img src="https://z-cdn-media.chatglm.cn/files/8ec0f45f-aac5-4ba4-892b-e32fc8f76ed2.jpg?auth_key=1866751818-2ee6d09ca25a4f69a7f451317a337325-0-f54c5ad6428b8cd184d7f86e07cb76cf" alt="Yusuf Store 25 Logo" class="hero-logo-img">
-            <h1>Yusuf Store 25</h1>
+            <h1>Yusuf_Store 25</h1>
             <p>"Langkah Nyaman, Gaya Terkini"</p>
             <button class="cta-btn" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">Belanja Sekarang</button>
         </div>
@@ -583,7 +618,7 @@
             <!-- Produk 1 -->
             <div class="product-card" data-category="running">
                 <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu1.jpg" alt="Sepatu Running Nike">
+                    <img src="sepatu1.jpg" alt="Sepatu Running Nike"> loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-category">running</span>
@@ -596,7 +631,7 @@
             <!-- Produk 2 -->
             <div class="product-card" data-category="casual">
                 <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu2.jpg" alt="Sepatu Le Coq">
+                    <img src="sepatu2.jpg" alt="Sepatu Le Coq"> loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-category">casual</span>
@@ -609,7 +644,7 @@
             <!-- Produk 3 -->
             <div class="product-card" data-category="running">
                 <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu3.jpg" alt="Sepatu Nike">
+                    <img src="sepatu3.jpg" alt="Sepatu Nike"> loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-category">running</span>
@@ -622,7 +657,7 @@
             <!-- Produk 4 -->
             <div class="product-card" data-category="kaos">
                 <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos1.jpg" alt="Kaos Oblong">
+                    <img src="kaos1.jpg" alt="Kaos Oblong"> loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-category">kaos</span>
@@ -635,7 +670,7 @@
 	    <!-- Produk 5 -->
             <div class="product-card" data-category="running">
                 <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu4.jpg" alt="Sepatu Running">
+                    <img src="sepatu4.jpg" alt="Sepatu Running"> loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-category">running</span>
@@ -648,7 +683,7 @@
 	    <!-- Produk 6 -->
             <div class="product-card" data-category="casual">
                 <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu5.jpg" alt="Sepatu Running">
+                    <img src="sepatu5.jpg" alt="Sepatu Running"> loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-category">casual</span>
