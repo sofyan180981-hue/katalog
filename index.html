@@ -3,103 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf_Store 25 - Toko Sepatu Terlengkap di Padang Sidimpuan</title>
+    <title>Yusuf_Store 25 - Katalog Resmi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap');
-        body { font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
-        .font-brand { font-family: 'Montserrat', sans-serif; }
-        .logo-img { height: 50px !important; width: auto !important; object-fit: contain; border-radius: 6px; }
-        .footer-logo-img { height: 80px !important; width: auto !important; margin: 0 auto; border-radius: 10px; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth;
+        }
+
+        .product-card { 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            border-radius: 16px; 
+            background: white;
+        }
+        
+        .product-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image { 
+            aspect-ratio: 1/1;
+            width: 100%; 
+            object-fit: cover; 
+            background: #f1f5f9;
+            border-radius: 12px;
+        }
+
+        .filter-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        /* Navigasi Transparan */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-900">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+    <!-- Navigasi -->
+    <nav class="sticky top-0 z-50 nav-glass border-b border-slate-200">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="1000108714.jpg" alt="Logo Yusuf_Store 25" class="logo-img" onerror="this.src='https://ui-avatars.com/api/?name=Y25&background=0D8ABC&color=fff';">
-                <div class="flex flex-col">
-                    <h1 class="text-lg font-black text-gray-900 leading-none font-brand uppercase tracking-tighter">YUSUF_STORE <span class="text-blue-600">25</span></h1>
-                    <span class="text-[10px] text-gray-500 font-bold tracking-widest uppercase">Padang Sidimpuan</span>
+                <img src="1000108714.jpg" alt="Logo" class="h-10 w-auto rounded-lg shadow-sm" onerror="this.src='https://ui-avatars.com/api/?name=Y25&background=0D8ABC&color=fff';">
+                <div class="leading-none">
+                    <h1 class="text-xl font-extrabold tracking-tighter uppercase">YUSUF_STORE <span class="text-blue-600">25</span></h1>
+                    <span class="text-[9px] font-bold text-slate-400 tracking-[0.2em]">PADANG SIDIMPUAN</span>
                 </div>
             </div>
-            <div class="hidden md:flex space-x-6 font-medium text-gray-600">
-                <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
-                <a href="#katalog" class="hover:text-blue-600 transition">Katalog</a>
-                <a href="https://wa.me/6281375861195" target="_blank" class="bg-green-500 text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-green-600 transition">
-                    <i class="fab fa-whatsapp"></i> Chat Admin
-                </a>
-            </div>
+            <a href="https://wa.me/6281375861195" target="_blank" class="bg-green-600 text-white px-5 py-2 rounded-full font-bold flex items-center gap-2 hover:bg-green-700 transition shadow-md text-sm">
+                <i class="fab fa-whatsapp text-lg"></i> <span class="hidden sm:inline">CHAT ADMIN</span>
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="beranda" class="relative h-[450px] flex items-center overflow-hidden bg-black text-white">
-        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1920&q=80" alt="Banner" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <header class="bg-slate-900 text-white py-20 text-center relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl md:text-6xl font-black mb-4 font-brand leading-tight italic uppercase">Langkah Berkelas,<br>Harga Pas!</h2>
-            <p class="text-lg mb-8 text-gray-300 max-w-xl">Pusat sepatu Olahraga & Casual terlengkap di Padang Sidimpuan. Koleksi Import Premium & Lokal Original.</p>
-            <a href="#katalog" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition inline-block">Lihat Koleksi</a>
+            <h2 class="text-4xl md:text-7xl font-extrabold mb-4 italic uppercase tracking-tighter">KATALOG <span class="text-blue-500 text-outline">2025</span></h2>
+            <p class="text-slate-400 max-w-xl mx-auto italic font-light">Tampil Keren dengan Koleksi Sepatu Terbaik di Depan Tugu Salak</p>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-32 h-32 bg-blue-800 rounded-full blur-3xl"></div>
         </div>
     </header>
 
-    <!-- Katalog -->
-    <section id="katalog" class="py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-black text-gray-900 mb-12 font-brand uppercase">Katalog Unggulan</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Produk 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border group">
-                    <div class="h-60 overflow-hidden"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2">Red Sporty Import</h3>
-                        <p class="text-blue-600 font-black text-xl mb-4">Chat Harga</p>
-                        <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20tertarik%20dengan%20Red%20Sporty%20Import" class="block bg-gray-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Pesan Sekarang</a>
-                    </div>
-                </div>
-                <!-- Produk 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border group">
-                    <div class="h-60 overflow-hidden"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2">White Air Classic</h3>
-                        <p class="text-blue-600 font-black text-xl mb-4">Chat Harga</p>
-                        <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20tertarik%20dengan%20White%20Air%20Classic" class="block bg-gray-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Pesan Sekarang</a>
-                    </div>
-                </div>
-                <!-- Produk 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border group">
-                    <div class="h-60 overflow-hidden"><img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2">Sporty Neon Local</h3>
-                        <p class="text-blue-600 font-black text-xl mb-4">Chat Harga</p>
-                        <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20tertarik%20dengan%20Sporty%20Neon%20Local" class="block bg-gray-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Pesan Sekarang</a>
-                    </div>
-                </div>
-                <!-- Produk 4 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border group">
-                    <div class="h-60 overflow-hidden"><img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2">Shadow Black Casual</h3>
-                        <p class="text-blue-600 font-black text-xl mb-4">Chat Harga</p>
-                        <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20tertarik%20dengan%20Shadow%20Black%20Casual" class="block bg-gray-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Pesan Sekarang</a>
-                    </div>
-                </div>
+    <!-- Filter Bar -->
+    <div class="bg-white border-b sticky top-[65px] z-40 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex gap-2 overflow-x-auto no-scrollbar justify-center">
+            <button onclick="filterShoes('all')" class="filter-btn active whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition-all duration-300">Semua</button>
+            <button onclick="filterShoes('casual')" class="filter-btn whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition-all duration-300">Casual</button>
+            <button onclick="filterShoes('running')" class="filter-btn whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition-all duration-300">Running</button>
+            <button onclick="filterShoes('sneakers')" class="filter-btn whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition-all duration-300">Sneakers</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div id="shoe-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
+                <!-- Produk di-load lewat JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-12 text-center border-t">
-        <div class="container mx-auto px-4">
-            <img src="1000108714.jpg" alt="Logo" class="footer-logo-img mb-4" onerror="this.style.display='none'">
-            <h3 class="text-xl font-black font-brand uppercase italic">YUSUF_STORE 25</h3>
-            <p class="text-gray-500 text-sm mb-6">Padang Sidimpuan, Sumatera Utara</p>
-            <p class="text-gray-400 text-[10px] tracking-[0.3em] uppercase">&copy; 2024 Yusuf_Store 25</p>
+    <footer class="bg-slate-950 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-black mb-2 uppercase">YUSUF_STORE 25</h3>
+            <p class="text-slate-500 text-sm mb-8 italic">Kantin Jalan Merdeka, Depan Tugu Salak, Padang Sidimpuan</p>
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="#" class="text-2xl hover:text-blue-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="text-2xl hover:text-blue-400 transition"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="text-[10px] tracking-[0.5em] text-slate-700 font-bold uppercase">&copy; 2024 Yusuf_Store 25 Padang Sidimpuan</p>
         </div>
     </footer>
 
+    <script>
+        // DATA SEPATU BAPAK
+        // Tips: Ganti 'name' dengan nama sepatu asli, 'cat' dengan kategorinya.
+        const shoeData = [
+            { id: 1, name: "Casual One", cat: "casual", img: "sepatu1.jpg" },
+            { id: 2, name: "Running Pro", cat: "running", img: "sepatu2.jpg" },
+            { id: 3, name: "Urban Sneakers", cat: "sneakers", img: "sepatu3.jpg" },
+            { id: 4, name: "Casual Daily", cat: "casual", img: "sepatu4.jpg" },
+            { id: 5, name: "Speed Runner", cat: "running", img: "sepatu5.jpg" },
+            { id: 6, name: "Retro Sneaks", cat: "sneakers", img: "sepatu6.jpg" },
+            { id: 7, name: "Casual Sport", cat: "casual", img: "sepatu7.jpg" },
+            { id: 8, name: "Marathon X", cat: "running", img: "sepatu8.jpg" },
+            { id: 9, name: "Street Hype", cat: "sneakers", img: "sepatu9.jpg" },
+            { id: 10, name: "Casual Black", cat: "casual", img: "sepatu10.jpg" },
+            { id: 11, name: "Trail Master", cat: "running", img: "sepatu11.jpg" },
+            { id: 12, name: "Cloud Sneakers", cat: "sneakers", img: "sepatu12.jpg" },
+            { id: 13, name: "Classic Suede", cat: "casual", img: "sepatu13.jpg" },
+            { id: 14, name: "Sprint Fit", cat: "running", img: "sepatu14.jpg" },
+            { id: 15, name: "Vibe Sneakers", cat: "sneakers", img: "sepatu15.jpg" }
+        ];
+
+        const grid = document.getElementById('shoe-grid');
+
+        function renderShoes(filter = 'all') {
+            grid.innerHTML = '';
+            const filtered = filter === 'all' ? shoeData : shoeData.filter(s => s.cat === filter);
+            
+            filtered.forEach(shoe => {
+                const card = `
+                    <div class="product-card p-3 border border-slate-100">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="${shoe.img}" alt="${shoe.name}" class="product-image" onerror="this.src='https://via.placeholder.com/400x400?text=Foto+Sepatu';">
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <p class="text-[9px] font-bold uppercase text-blue-600 tracking-wider">${shoe.cat}</p>
+                                    <h3 class="font-bold text-sm md:text-base text-slate-800 leading-tight">${shoe.name}</h3>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6281375861195?text=Halo%20Admin,%20saya%20tertarik%20dengan%20${shoe.name}" 
+                               class="mt-3 w-full flex items-center justify-center gap-2 bg-slate-900 text-white py-2 rounded-lg font-bold text-xs hover:bg-blue-600 transition shadow-sm">
+                                <i class="fab fa-whatsapp"></i> PESAN
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        }
+
+        function filterShoes(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase() === category || (category === 'all' && btn.innerText === 'Semua')) {
+                    btn.classList.add('active');
+                }
+            });
+            renderShoes(category);
+        }
+
+        window.onload = () => renderShoes('all');
+    </script>
 </body>
 </html>
