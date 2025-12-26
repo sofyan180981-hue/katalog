@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf_Store 25 - Katalog Resmi</title>
+    <title>Yusuf_Store 25 - Gaya Keren, Harga Bersahabat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -18,6 +18,7 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
             border-radius: 16px; 
             background: white;
+            border: 1px solid #f1f5f9;
         }
         
         .product-card:hover { 
@@ -29,32 +30,49 @@
             aspect-ratio: 1/1;
             width: 100%; 
             object-fit: cover; 
-            background: #f1f5f9;
+            background: #f8fafc;
             border-radius: 12px;
+        }
+
+        .filter-btn {
+            transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .filter-btn.active {
             background-color: #2563eb;
             color: white;
             border-color: #2563eb;
+            transform: scale(1.05);
         }
 
         .nav-glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .banner-logo {
-            filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
-            animation: pulse 3s infinite ease-in-out;
+        /* Badge Warna Kategori */
+        .badge-running { background: #dcfce7; color: #166534; }
+        .badge-casual { background: #e0f2fe; color: #075985; }
+        .badge-futsal { background: #fef9c3; color: #854d0e; }
+        .badge-kaos { background: #ffedd5; color: #9a3412; }
+
+        .slogan-text {
+            background: linear-gradient(to right, #60a5fa, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease forwards;
         }
     </style>
 </head>
@@ -63,103 +81,121 @@
     <!-- Navigasi -->
     <nav class="sticky top-0 z-50 nav-glass border-b border-slate-200">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="1000108714.jpg" alt="Logo Small" class="h-10 w-auto rounded-lg shadow-sm" onerror="this.src='https://ui-avatars.com/api/?name=Y25&background=0D8ABC&color=fff';">
+            <div class="flex items-center gap-2">
+                <img src="1000108714.jpg" alt="Logo" class="h-9 w-auto rounded-lg" onerror="this.src='https://ui-avatars.com/api/?name=Y25&background=0D8ABC&color=fff';">
                 <div class="leading-none">
-                    <h1 class="text-xl font-extrabold tracking-tighter uppercase text-slate-900">YUSUF_STORE <span class="text-blue-600">25</span></h1>
-                    <span class="text-[9px] font-bold text-slate-400 tracking-[0.2em]">PADANG SIDIMPUAN</span>
+                    <h1 class="text-lg font-extrabold tracking-tighter uppercase">YUSUF_STORE <span class="text-blue-600">25</span></h1>
                 </div>
             </div>
-            <a href="https://wa.me/6281375861195" target="_blank" class="bg-green-600 text-white px-5 py-2 rounded-full font-bold flex items-center gap-2 hover:bg-green-700 transition shadow-md text-sm">
-                <i class="fab fa-whatsapp text-lg"></i> <span class="hidden sm:inline uppercase tracking-tight">CHAT ADMIN</span>
+            <a href="https://wa.me/6281375861195" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full font-bold flex items-center gap-2 hover:bg-green-700 transition shadow-md text-[10px] uppercase">
+                <i class="fab fa-whatsapp"></i> Chat Admin
             </a>
         </div>
     </nav>
 
-    <!-- Banner -->
-    <header class="bg-slate-900 text-white py-24 md:py-32 text-center relative overflow-hidden">
+    <!-- Banner Dengan Slogan & Keterangan Kualitas -->
+    <header class="bg-slate-950 text-white py-16 md:py-28 text-center relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
-            <div class="flex justify-center mb-8">
-                <img src="1000108714.jpg" alt="Logo Yusuf_Store 25" class="banner-logo h-32 md:h-44 w-auto rounded-3xl border-4 border-blue-500/30 shadow-2xl shadow-blue-500/20" onerror="this.style.display='none'">
+            <div class="flex justify-center mb-6">
+                <img src="1000108714.jpg" alt="Logo Utama" class="h-28 md:h-36 w-auto rounded-3xl border-2 border-blue-500/30 shadow-2xl" onerror="this.style.display='none'">
             </div>
-            
-            <h2 class="text-5xl md:text-8xl font-extrabold mb-4 italic uppercase tracking-tighter leading-tight">
+            <h2 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tighter italic">
                 YUSUF_STORE <span class="text-blue-500">25</span>
             </h2>
-            <div class="flex items-center justify-center gap-2 mb-6 text-blue-400 font-bold tracking-[0.3em] text-xs md:text-sm uppercase">
-                <i class="fas fa-map-marker-alt"></i> PADANG SIDIMPUAN
+            
+            <!-- SLOGAN UTAMA -->
+            <p class="text-lg md:text-2xl font-bold slogan-text italic mb-6">
+                "Langkah Pasti, Gaya Masa Kini"
+            </p>
+
+            <!-- KETERANGAN KUALITAS PRODUK -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
+                    <i class="fas fa-globe-americas text-blue-400 text-xs"></i>
+                    <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">Sepatu Kualitas Import</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
+                    <i class="fas fa-certificate text-yellow-400 text-xs"></i>
+                    <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">Sepatu Lokal Original</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-sm shadow-lg">
+                    <i class="fas fa-tshirt text-blue-400 text-xs"></i>
+                    <span class="text-[10px] md:text-xs font-semibold uppercase tracking-wider">Kaos Berkualitas</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center gap-2 text-slate-400 font-bold tracking-[0.2em] text-[10px] uppercase">
+                <i class="fas fa-map-marker-alt text-blue-500"></i> Depan Tugu Salak - Padang Sidimpuan
             </div>
         </div>
-        <div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600 rounded-full blur-[100px]"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-900 rounded-full blur-[100px]"></div>
+        
+        <!-- Dekorasi Background -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none">
+            <div class="absolute top-0 left-0 w-80 h-80 bg-blue-600 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-900 rounded-full blur-[120px]"></div>
         </div>
     </header>
 
-    <!-- Filter -->
-    <div class="bg-white border-b sticky top-[65px] z-40 shadow-sm">
-        <div class="container mx-auto px-4 py-4 flex gap-2 overflow-x-auto no-scrollbar justify-center">
-            <button onclick="filterShoes('all')" class="filter-btn active whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition">Semua</button>
-            <button onclick="filterShoes('casual')" class="filter-btn whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition">Casual</button>
-            <button onclick="filterShoes('running')" class="filter-btn whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition">Running</button>
-            <button onclick="filterShoes('sneakers')" class="filter-btn whitespace-nowrap px-6 py-2 rounded-xl border border-slate-200 font-bold text-sm transition">Sneakers</button>
+    <!-- Filter Bar -->
+    <div class="bg-white border-b sticky top-[60px] z-40 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex gap-2 overflow-x-auto no-scrollbar justify-start md:justify-center">
+            <button onclick="filterItems('all')" class="filter-btn active px-6 py-2 rounded-xl border border-slate-200 font-bold text-xs uppercase tracking-widest transition">Semua</button>
+            <button onclick="filterItems('running')" class="filter-btn px-6 py-2 rounded-xl border border-slate-200 font-bold text-xs uppercase tracking-widest transition">Running</button>
+            <button onclick="filterItems('casual')" class="filter-btn px-6 py-2 rounded-xl border border-slate-200 font-bold text-xs uppercase tracking-widest transition">Casual</button>
+            <button onclick="filterItems('futsal')" class="filter-btn px-6 py-2 rounded-xl border border-slate-200 font-bold text-xs uppercase tracking-widest transition">Futsal</button>
+            <button onclick="filterItems('kaos')" class="filter-btn px-6 py-2 rounded-xl border border-slate-200 font-bold text-xs uppercase tracking-widest transition">Kaos</button>
         </div>
     </div>
 
-    <!-- Grid Produk -->
+    <!-- Katalog Produk -->
     <section class="py-12">
         <div class="container mx-auto px-4">
-            <div id="shoe-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
+            <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
+                <!-- Produk Otomatis Disini -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-white py-16">
+    <footer class="bg-slate-950 text-white py-16 border-t border-slate-900">
         <div class="container mx-auto px-4 text-center">
-            <img src="1000108714.jpg" alt="Logo Footer" class="h-12 mx-auto mb-6 rounded-lg opacity-80" onerror="this.style.display='none'">
-            <h3 class="text-2xl font-black mb-2 uppercase">YUSUF_STORE 25</h3>
-            <p class="text-slate-500 text-sm mb-12 italic uppercase tracking-widest">Padang Sidimpuan</p>
-            <p class="text-[10px] tracking-[0.5em] text-slate-700 font-bold uppercase">&copy; 2024 Yusuf_Store 25</p>
+            <h3 class="text-xl font-bold mb-2 uppercase">YUSUF_STORE 25</h3>
+            <p class="text-slate-500 text-xs italic mb-8">Pusat Fashion & Sepatu Terlengkap di Padang Sidimpuan</p>
+            <p class="text-[9px] tracking-[0.5em] text-slate-800 font-bold uppercase">&copy; 2024 Yusuf_Store 25</p>
         </div>
     </footer>
 
     <script>
-        // CARA MERUBAH NAMA SEPATU:
-        // Ganti tulisan di dalam tanda petik pada bagian 'name' di bawah ini.
-        // Contoh: name: "Nama Sepatu Bapak"
-        
-        const shoeData = [
-            { id: 1, name: "Adidas Casual Neo", cat: "casual", img: "sepatu1.jpg" },
-            { id: 2, name: "Nike Running Swift", cat: "running", img: "sepatu2.jpg" },
-            { id: 3, name: "Vans Old Skool", cat: "sneakers", img: "sepatu3.jpg" },
-            { id: 4, name: "Puma Casual Drive", cat: "casual", img: "sepatu4.jpg" },
-            { id: 5, name: "Asics Running Gel", cat: "running", img: "sepatu5.jpg" },
-            { id: 6, name: "Converse All Star", cat: "sneakers", img: "sepatu6.jpg" },
-            { id: 7, name: "Reebok Classic", cat: "casual", img: "sepatu7.jpg" },
-            { id: 8, name: "Adidas Running Boost", cat: "running", img: "sepatu8.jpg" },
-            { id: 9, name: "Nike Air Jordan", cat: "sneakers", img: "sepatu9.jpg" },
-            { id: 10, name: "New Balance Casual", cat: "casual", img: "sepatu10.jpg" }
+        // DATA PRODUK
+        const productData = [
+            { id: 1, name: "Nike Running Pro", cat: "running", img: "sepatu1.jpg" },
+            { id: 2, name: "Adidas Casual Neo", cat: "casual", img: "sepatu2.jpg" },
+            { id: 3, name: "Specs Accelerator Futsal", cat: "futsal", img: "sepatu3.jpg" },
+            { id: 4, name: "Kaos Distro Premium", cat: "kaos", img: "kaos1.jpg" },
+            { id: 5, name: "New Balance 530", cat: "running", img: "sepatu4.jpg" },
+            { id: 6, name: "Puma Suede Classic", cat: "casual", img: "sepatu5.jpg" },
+            { id: 7, name: "Mizuno Morelia Futsal", cat: "futsal", img: "sepatu6.jpg" },
+            { id: 8, name: "Kaos Oversize Y25", cat: "kaos", img: "kaos2.jpg" }
         ];
 
-        const grid = document.getElementById('shoe-grid');
+        const grid = document.getElementById('product-grid');
 
-        function renderShoes(filter = 'all') {
+        function renderProducts(filter = 'all') {
             grid.innerHTML = '';
-            const filtered = filter === 'all' ? shoeData : shoeData.filter(s => s.cat === filter);
+            const filtered = filter === 'all' ? productData : productData.filter(p => p.cat === filter);
             
-            filtered.forEach(shoe => {
+            filtered.forEach(item => {
                 const card = `
-                    <div class="product-card p-3 border border-slate-100">
-                        <div class="relative overflow-hidden rounded-xl bg-slate-100">
-                            <img src="${shoe.img}" alt="${shoe.name}" class="product-image" onerror="this.src='https://via.placeholder.com/400x400?text=Foto+Sepatu';">
+                    <div class="product-card p-3 animate-fade-in">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="${item.img}" alt="${item.name}" class="product-image" onerror="this.src='https://via.placeholder.com/400x400?text=Yusuf+Store+25';">
                         </div>
                         <div class="mt-4">
-                            <p class="text-[9px] font-bold uppercase text-blue-600 tracking-wider">${shoe.cat}</p>
-                            <h3 class="font-bold text-sm md:text-base text-slate-800 leading-tight mb-3 h-10 overflow-hidden">${shoe.name}</h3>
-                            <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20tertarik%20dengan%20${shoe.name}" 
-                               class="w-full flex items-center justify-center gap-2 bg-slate-900 text-white py-2 rounded-lg font-bold text-xs hover:bg-blue-600 transition shadow-sm">
-                                <i class="fab fa-whatsapp"></i> PESAN
+                            <span class="text-[9px] font-extrabold uppercase px-2 py-0.5 rounded badge-${item.cat}">${item.cat}</span>
+                            <h3 class="font-bold text-sm text-slate-800 leading-tight mt-1 mb-4 h-10 overflow-hidden line-clamp-2">${item.name}</h3>
+                            <a href="https://wa.me/6281375861195?text=Halo%20Yusuf_Store%2025,%20saya%20tertarik%20dengan%20${item.name}" 
+                               class="w-full flex items-center justify-center gap-2 bg-slate-900 text-white py-2.5 rounded-xl font-bold text-xs hover:bg-blue-600 transition active:scale-95 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> PESAN SEKARANG
                             </a>
                         </div>
                     </div>
@@ -168,17 +204,17 @@
             });
         }
 
-        function filterShoes(category) {
+        function filterItems(category) {
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if(btn.innerText.toLowerCase() === category || (category === 'all' && btn.innerText === 'Semua')) {
+                if (btn.getAttribute('onclick').includes(`'${category}'`)) {
                     btn.classList.add('active');
                 }
             });
-            renderShoes(category);
+            renderProducts(category);
         }
 
-        window.onload = () => renderShoes('all');
+        window.onload = () => renderProducts('all');
     </script>
 </body>
 </html>
