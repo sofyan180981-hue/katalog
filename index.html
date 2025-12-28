@@ -672,20 +672,23 @@
         <h2 class="section-title">Merek Tersedia</h2>
         <div class="brands-grid">
             <!-- Logo Global (Wikimedia) -->
-            <div class="brand-item"><img src="logo_adidas.jpg" alt="ADIDAS"></div>
-            <div class="brand-item"><img src="logo_nike.jpg" alt="NIKE"></div>
-            <div class="brand-item"><img src="logo_Onitsuka.jpg" alt="ONITSUKA"></div>
-            <div class="brand-item"><img src="logo_nb.jpg" alt="NB"></div>
-            <div class="brand-item"><img src="logo_oncloud.jpg" alt="On Cloud"></div>
-            <div class="brand-item"><img src="logo_puma.jpg" alt="PUMA"></div>
-            <div class="brand-item"><img src="logo_ortus.jpg" alt="Ortus"></div>
-            <div class="brand-item"><img src="logo_910.jpg" alt="910"></div>
-            <div class="brand-item"><img src="logo_Skechers.jpg" alt="Skechers"></div>
-            <div class="brand-item"><img src="logo_hoka.jpg" alt="HOKA"></div>
-            <div class="brand-item"><img src="logo_Asics.jpg" alt="Asics"></div>
-            <div class="brand-item"><img src="logo_specs.jpg" alt="Specs"></div>
-            <div class="brand-item"><img src="logo_ua.jpg" alt="Under Armor"></div>
-            <div class="brand-item"><img src="leqoc.jpg" alt="Le Coq"></div>
+            <!-- DITAMBAH: onclick="filterByBrand('...')" dan style="cursor:pointer;" -->
+            <div class="brand-item" onclick="filterByBrand('Adidas')" style="cursor:pointer;"><img src="logo_adidas.jpg" alt="ADIDAS"></div>
+            <div class="brand-item" onclick="filterByBrand('Nike')" style="cursor:pointer;"><img src="logo_nike.jpg" alt="NIKE"></div>
+            <div class="brand-item" onclick="filterByBrand('Onitsuka')" style="cursor:pointer;"><img src="logo_Onitsuka.jpg" alt="ONITSUKA"></div>
+            <div class="brand-item" onclick="filterByBrand('NB')" style="cursor:pointer;"><img src="logo_nb.jpg" alt="NB"></div>
+            <div class="brand-item" onclick="filterByBrand('On')" style="cursor:pointer;"><img src="logo_oncloud.jpg" alt="On Cloud"></div>
+            <div class="brand-item" onclick="filterByBrand('Puma')" style="cursor:pointer;"><img src="logo_puma.jpg" alt="PUMA"></div>
+            <div class="brand-item" onclick="filterByBrand('Ortuseight')" style="cursor:pointer;"><img src="logo_ortus.jpg" alt="Ortus"></div>
+            <div class="brand-item" onclick="filterByBrand('910')" style="cursor:pointer;"><img src="logo_910.jpg" alt="910"></div>
+            <div class="brand-item" onclick="filterByBrand('Skechers')" style="cursor:pointer;"><img src="logo_Skechers.jpg" alt="Skechers"></div>
+            <div class="brand-item" onclick="filterByBrand('Hoka')" style="cursor:pointer;"><img src="logo_hoka.jpg" alt="HOKA"></div>
+            <div class="brand-item" onclick="filterByBrand('Asics')" style="cursor:pointer;"><img src="logo_Asics.jpg" alt="Asics"></div>
+            <div class="brand-item" onclick="filterByBrand('Specs')" style="cursor:pointer;"><img src="logo_specs.jpg" alt="Specs"></div>
+        </div>
+        <!-- Tombol Reset untuk menampilkan kembali semua -->
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="filterSelection('all')" class="filter-btn">Tampilkan Semua Produk</button>
         </div>
     </section>
 
@@ -705,7 +708,6 @@
         <div class="products-grid">
             <!-- Produk 1 (Soldout) -->
             <div class="product-card soldout" data-category="running">
-                <!-- Badge Soldout DIPINDAHKAN KE SINI -->
                 <span class="soldout-badge">SOLDOUT</span>
                 <div class="product-image" onclick="openModal(this)">
                     <img src="sepatu1.jpg" alt="NB Elite Size 40" loading="lazy">
@@ -714,7 +716,6 @@
                     <span class="product-category">running</span>
                     <h3 class="product-title">NB Elite Size 40</h3>
                     <p class="product-price">Rp 400.000</p>
-                    <!-- Link sudah diperbaiki dengan </a> -->
                     <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
                 </div>
             </div>
@@ -903,7 +904,6 @@
 
             <!-- Produk 15 (Soldout) -->
             <div class="product-card soldout" data-category="Casual">
-                <!-- Badge Soldout DIPINDAHKAN KE SINI -->
                 <span class="soldout-badge">SOLDOUT</span>
                 <div class="product-image" onclick="openModal(this)">
                     <img src="sepatu47.jpg" alt="Mizuno Size 41" loading="lazy">
@@ -1114,7 +1114,6 @@
 
             <!-- Produk 30 (Soldout) -->
             <div class="product-card soldout" data-category="kaos">
-                <!-- Badge Soldout DIPINDAHKAN KE SINI -->
                 <span class="soldout-badge">SOLDOUT</span>
                 <div class="product-image" onclick="openModal(this)">
                     <img src="kaos10.jpg" alt="Kaos TNF Abu" loading="lazy">
@@ -1129,7 +1128,6 @@
 
             <!-- Produk 31 (Soldout) -->
             <div class="product-card soldout" data-category="kaos">
-                <!-- Badge Soldout DIPINDAHKAN KE SINI -->
                 <span class="soldout-badge">SOLDOUT</span>
                 <div class="product-image" onclick="openModal(this)">
                     <img src="kaos11.jpg" alt="Kaos Adidas panjang" loading="lazy">
@@ -1438,7 +1436,6 @@
 
             <!-- Produk 53 (Soldout) -->
             <div class="product-card soldout" data-category="casual">
-                <!-- Badge Soldout DIPINDAHKAN KE SINI -->
                 <span class="soldout-badge">SOLDOUT</span>
                 <div class="product-image" onclick="openModal(this)">
                     <img src="sepatu48.jpg" alt="NB 1500 Size 40" loading="lazy">
@@ -1496,7 +1493,7 @@
             <!-- Produk 57 -->
             <div class="product-card soldout" data-category="casual">
                  <span class="soldout-badge">SOLDOUT</span>
-		<div class="product-image" onclick="openModal(this)">
+        <div class="product-image" onclick="openModal(this)">
                     <img src="sepatu49.jpg" alt="Samba Kuning Size 40" loading="lazy">
                 </div>
                 <div class="product-info">
@@ -1830,6 +1827,33 @@
             const url = `https://wa.me/6281375861195?text=${encodeURIComponent(pesan)}`;
             window.open(url, '_blank');
         }
+
+        // --- TAMBAHKAN FUNGSI BARU (FILTER BY BRAND) ---
+        function filterByBrand(brandName) {
+            const cards = document.getElementsByClassName("product-card");
+            
+            // Loop semua produk
+            for (let i = 0; i < cards.length; i++) {
+                // Ambil judul produk
+                const titleElement = cards[i].querySelector(".product-title");
+                
+                if (titleElement) {
+                    const titleText = titleElement.innerText.toLowerCase();
+                    const brand = brandName.toLowerCase();
+                    
+                    // Cek apakah judul produk mengandung nama merek
+                    if (titleText.includes(brand)) {
+                        cards[i].style.display = "block"; // Tampilkan jika cocok
+                    } else {
+                        cards[i].style.display = "none";  // Sembunyikan jika tidak cocok
+                    }
+                }
+            }
+            
+            // Gulir otomatis ke bagian katalog
+            document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});
+        }
+        // -----------------------------------
     </script>
 </body>
 </html>
