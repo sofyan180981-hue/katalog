@@ -329,6 +329,44 @@
             color: var(--white);
         }
 
+        /* --- STYLE UNTUK SEARCH BAR (TAMBAHAN) --- */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 30px auto; /* Tengah, jarak dari tombol filter */
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 30px; /* Agar bulat mengikuti gaya tombol */
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 8px rgba(230, 57, 70, 0.2);
+        }
+
+        .search-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 0 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-btn:hover {
+            background-color: var(--primary-color);
+        }
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -672,7 +710,6 @@
         <h2 class="section-title">Merek Tersedia</h2>
         <div class="brands-grid">
             <!-- Logo Global (Wikimedia) -->
-            <!-- DITAMBAH: onclick="filterByBrand('...')" dan style="cursor:pointer;" -->
             <div class="brand-item" onclick="filterByBrand('Adidas')" style="cursor:pointer;"><img src="logo_adidas.jpg" alt="ADIDAS"></div>
             <div class="brand-item" onclick="filterByBrand('Nike')" style="cursor:pointer;"><img src="logo_nike.jpg" alt="NIKE"></div>
             <div class="brand-item" onclick="filterByBrand('Onitsuka')" style="cursor:pointer;"><img src="logo_Onitsuka.jpg" alt="ONITSUKA"></div>
@@ -708,6 +745,13 @@
             <button class="filter-btn" onclick="filterSelection('kaos')">KAOS</button>
             <button class="filter-btn" onclick="filterSelection('jamtangan')">JAM TANGAN</button>
         </div>
+
+        <!-- --- KOTAK PENCARIAN (TAMBAHAN) --- -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cari sepatu (Contoh: Nike, Merah, Running)..." onkeyup="searchProduct()">
+            <button class="search-btn" onclick="searchProduct()">🔍</button>
+        </div>
+        <!-- ---------------------------------- -->
 
         <div class="products-grid">
             <!-- Produk 1 (Soldout) -->
@@ -1832,7 +1876,7 @@
             window.open(url, '_blank');
         }
 
-        // --- TAMBAHKAN FUNGSI BARU (FILTER BY BRAND) ---
+        // --- TAMBAHKan FUNGSI BARU (FILTER BY BRAND) ---
         function filterByBrand(brandName) {
             const cards = document.getElementsByClassName("product-card");
             
@@ -1858,6 +1902,34 @@
             document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});
         }
         // -----------------------------------
+
+        // --- FUNGSI PENCARIAN (SEARCH) ---
+        function searchProduct() {
+            // 1. Ambil teks yang diketik user (diubah jadi huruf kecil)
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            
+            // 2. Ambil semua kartu produk
+            const cards = document.getElementsByClassName("product-card");
+            
+            for (let i = 0; i < cards.length; i++) {
+                // Ambil Judul dan Kategori
+                const titleElement = cards[i].querySelector(".product-title");
+                const categoryElement = cards[i].querySelector(".product-category");
+                
+                if (titleElement && categoryElement) {
+                    const titleText = titleElement.innerText.toLowerCase();
+                    const categoryText = categoryElement.innerText.toLowerCase();
+                    
+                    // 3. Cek apakah Judul atau Kategori mengandung kata kunci pencarian
+                    if (titleText.includes(input) || categoryText.includes(input)) {
+                        cards[i].style.display = "block"; // Tampilkan jika cocok
+                    } else {
+                        cards[i].style.display = "none";  // Sembunyikan jika tidak cocok
+                    }
+                }
+            }
+        }
+        // ------------------------------------
     </script>
 </body>
 </html>
