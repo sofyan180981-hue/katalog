@@ -3,2063 +3,1104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf_Store 25 - Sepatu & Kaos Berkualitas</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFTDX8S9D1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TFTDX8S9D1');
-</script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>SD Negeri 0207 Pangirkiran - Website Resmi</title>
+    <meta name="description" content="Website Resmi SD Negeri 0207 Pangirkiran, Kabupaten Padang Lawas. Kurikulum Merdeka.">
     
-    <!-- 1. Meta Deskripsi (Ringkasan untuk Google) -->
-    <meta name="description" content="Yusuf_Store 25 - Jual Sepatu Running, Casual & Kaos Original (Nike, Adidas, Hoka). Alamat di Jln. Merdeka Kantin Padang Sidimpuan. Buka 11.00 - 22.30 WIB.">
-
-    <!-- 2. Meta Keywords (Kata kunci pencarian) -->
-    <meta name="keywords" content="Sepatu High Quality, Sepatu Running, Sepatu Nike, Sepatu Adidas, Toko Sepatu Padang Sidimpuan, Sepatu Hoka, Sepatu Murah, Kaos Lari">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- 3. Open Graph (Agar bagus saat dibagikan di WA/Instagram/FB) -->
-    <meta property="og:title" content="Yusuf_Store 25 - Sepatu High Quality, Padang Sidimpuan">
-    <meta property="og:description" content="Temukan sepatu lari dan casual original. Nike, Adidas, Hoka dan banyak lagi. Lokasi: Padang Sidimpuan.">
-    <meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/8ec0f45f-aac5-4ba4-892b-e32fc8f76ed2.jpg?auth_key=1866751818-2ee6d09ca25a4f69a7f451317a337325-0-f54c5ad6428b8cd184d7f86e07cb76cf">
-    <meta property="og:url" content="https://sofyan180981-hue.github.io/yusufstore25/">
-    <meta property="og:type" content="website">
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- CSS VARIABLES & RESET --- */
+        /* --- VARIABEL CSS (TEMA MERAH PUTIH) --- */
         :root {
-            --primary-color: #e63946; /* Merah Aksen */
-            --secondary-color: #1d3557; /* Biru Tua */
-            --bg-color: #f8f9fa;
-            --text-color: #333;
+            --primary-color: #C62828; /* Merah Indonesia */
+            --secondary-color: #f39c12; /* Kuning/Emas (Kontras) */
+            --accent-green: #27ae60; /* Hijau (Khusus Kurikulum Merdeka) */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
             --white: #ffffff;
-            --gray-light: #e9ecef;
-            --shadow: 0 4px 6px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
+            --radius: 10px;
+            --light-red-bg: #FFEBEE; /* Background merah muda untuk badge */
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a { text-decoration: none; color: inherit; }
+        /* --- RESET & DASAR --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--text-dark); background-color: var(--bg-light); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         img { max-width: 100%; display: block; }
+        section { padding: 80px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
-        /* --- HEADER & NAVIGATION --- */
-        .top-bar {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 { color: var(--primary-color); margin-bottom: 20px; font-weight: 700; }
+        h2 { font-size: 2.2rem; text-align: center; position: relative; padding-bottom: 20px; margin-bottom: 40px; }
+        h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: var(--secondary-color); border-radius: 2px; }
+        p { margin-bottom: 15px; color: var(--text-light); }
+        
+        /* --- BUTTONS --- */
+        .btn { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 12px 30px; border-radius: 50px; font-weight: 600; border: none; cursor: pointer; }
+        .btn:hover { background-color: #a01f1f; transform: translateY(-2px); }
+        .btn-secondary { background-color: var(--secondary-color); }
+        .btn-secondary:hover { background-color: #e67e22; }
+
+        /* --- HEADER & NAV (UPDATE: 2 BARIS RAPI) --- */
+        header { background-color: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 1000; }
+        .navbar { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 110px; /* DIPERBESAR AGAR MUAT 2 BARIS */
+            padding: 0 20px; /* Padding tambahan agar teks tidak nabrak pinggir */
+        }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); display: flex; align-items: center; gap: 10px; }
+        .logo i { font-size: 1.8rem; color: var(--secondary-color); }
+        
+        .nav-links { 
+            display: flex; 
+            flex-wrap: wrap; /* KUNCINYA: AGAR TURUN KE BARIS KE-2 JIKA PENUH */
+            gap: 15px; 
+            justify-content: center; /* RATA TENGAH SUPAYA RAPI */
             align-items: center;
-            flex-wrap: wrap;
         }
 
-        .header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 5%;
+        .nav-links a { 
+            font-weight: 500; 
+            color: var(--text-dark); 
+            font-size: 0.85rem; /* UKURAN FONT DIKECILKAN AGAR MUAT */
+            padding: 6px 12px;
+            border-radius: 20px; /* DIBULATKAN AGAR TIDAK KOTAK KASAR */
+        }
+        
+        /* UPDATE WARNA MENU SAAT HOVER & AKTIF */
+        .nav-links a:hover, .nav-links a.active { 
+            color: var(--white); 
+            background-color: var(--primary-color); 
+            box-shadow: 0 4px 8px rgba(198, 40, 40, 0.3);
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* PEMBATAS (SEPARATOR) ANTAR MENU AGAR RAPI */
+        .nav-links li { position: relative; }
+        .nav-links li:not(:last-child)::after {
+            content: "|";
+            color: #eee;
+            margin-left: 15px;
+            font-size: 0.7rem;
         }
 
-        .logo-img-wrapper {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
+        .hamburger { display: none; cursor: pointer; font-size: 1.5rem; color: var(--primary-color); }
 
-        .logo-img-wrapper img {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
-            transition: var(--transition);
-        }
-
-        .logo-img-wrapper:hover img {
-            transform: scale(1.1) rotate(5deg);
-            filter: drop-shadow(0 5px 10px rgba(230, 57, 70, 0.5));
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover { color: var(--primary-color); }
-
-        /* --- ANIMASI KEYFRAMES --- */
-        @keyframes floatLogo {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes glowingBorder {
-            0% { 
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(230, 57, 70, 0.2); 
-                border-color: white;
-            }
-            50% { 
-                box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 50px rgba(230, 57, 70, 0.6); 
-                border-color: #e63946;
-            }
-            100% { 
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(230, 57, 70, 0.2); 
-                border-color: white;
-            }
-        }
-
-        /* --- HERO SECTION (Banner) --- */
+        /* --- HERO SECTION --- */
         .hero {
             position: relative;
-            height: 600px; /* Tinggi diperbanyak sedikit agar muat konten */
-            max-height: 80vh;
-            /* Gambar Banner Sepatu Estetik */
-            background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1950&q=80'); 
+            background: linear-gradient(rgba(198, 40, 40, 0.4), rgba(198, 40, 40, 0.4)), url('banner-sekolah.jpg');
             background-size: cover;
             background-position: center;
+            color: var(--white);
+            height: 50vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: left; /* Teks rata kiri */
-            color: var(--white);
+            text-align: center;
+            padding: 0;
         }
+        .hero-logo { position: absolute; top: 20px; z-index: 10; }
+        .left-logo { left: 20px; }
+        .right-logo { right: 20px; }
+        .hero-logo img { width: 130px; height: auto; background: rgba(255,255,255, 0.9); padding: 12px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+        .hero-logo img:hover { transform: scale(1.1); }
+        .hero-content h1 { color: var(--white); font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero-content p { color: #eee; font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px; }
 
-        .hero-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5); /* Background gelap agak tebal agar tulisan terbaca */
+        /* --- SAMBUTAN KEPALA SEKOLAH --- */
+        .sambutan-section { background-color: var(--white); padding: 60px 20px; border-bottom: 1px solid #eee; }
+        .sambutan-box { display: flex; align-items: center; gap: 40px; max-width: 1000px; margin: 0 auto; }
+        .sambutan-img { flex: 0 0 300px; }
+        .sambutan-img img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); border: 4px solid var(--primary-color); }
+        .sambutan-content { position: relative; flex: 1; }
+        .quote-icon { font-size: 3rem; color: var(--primary-color); opacity: 0.1; position: absolute; top: -20px; left: 0; transform: rotate(180deg); }
+        .sambutan-text { font-size: 1.05rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 15px; font-style: italic; }
+        .sambutan-sign { font-weight: bold; font-style: italic; color: var(--text-dark); margin-top: 20px; border-top: 2px solid #eee; padding-top: 10px; display: inline-block; color: var(--primary-color); }
+
+        /* --- PROFIL SECTION --- */
+        .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
+        .headmaster-card { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
+        .headmaster-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 5px solid var(--light-red-bg); }
+        .info-badge { display: inline-block; background: var(--light-red-bg); color: var(--primary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-right: 5px; margin-bottom: 10px; font-weight: 600; }
+
+        /* --- VISI MISI & KURIKULUM --- */
+        .visi-misi-section { background: var(--white); }
+        .visi-box { text-align: center; background: var(--primary-color); color: var(--white); padding: 40px; border-radius: var(--radius); margin-bottom: 40px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+        .visi-box::before { content: '\f10d'; font-family: 'Font Awesome 5 Free'; font-weight: 900; position: absolute; top: 20px; left: 20px; font-size: 3rem; opacity: 0.1; }
+        .visi-box h3 { color: var(--white); margin-bottom: 15px; font-size: 1.8rem; }
+        .misi-container { max-width: 900px; margin: 0 auto; }
+        .misi-list li { position: relative; padding-left: 35px; margin-bottom: 15px; font-size: 1.05rem; color: var(--text-light); }
+        .misi-list li::before { content: '\f00c'; font-family: 'Font Awesome 5 Free'; font-weight: 900; position: absolute; left: 0; top: 2px; color: var(--secondary-color); }
+        .kurikulum-box { background: linear-gradient(to right, #fff, #f0fff4); border: 2px solid var(--accent-green); padding: 20px; border-radius: var(--radius); text-align: center; margin-top: 40px; }
+        .kurikulum-box h3 { color: var(--accent-green); display: flex; align-items: center; justify-content: center; gap: 10px; }
+
+        /* --- SARPRAS & EKSKUL --- */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; transition: 0.3s; height: 100%; border-top: 4px solid var(--primary-color); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(198, 40, 40, 0.15); }
+        
+        .card.sarpras-card { cursor: pointer; position: relative; }
+        .card.sarpras-card::after { content: 'Lihat Foto'; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); background: var(--secondary-color); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; opacity: 0; transition: 0.3s; }
+        .card.sarpras-card:hover::after { opacity: 1; bottom: 25px; }
+        .card-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
+        .ekskul-item { position: relative; border-radius: var(--radius); overflow: hidden; height: 250px; group; }
+        .ekskul-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .ekskul-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(198, 40, 40, 0.85); color: var(--white); padding: 15px; transform: translateY(100%); transition: 0.3s; }
+        .ekskul-item:hover img { transform: scale(1.1); }
+        .ekskul-item:hover .ekskul-overlay { transform: translateY(0); }
+
+        /* --- TENAGA PENDIDIK (GRID FOTO) --- */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; } 
+
+        .guru-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border-bottom: 3px solid var(--primary-color); cursor: pointer; transition: 0.3s; }
+        .guru-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .guru-img-wrapper { height: 220px; overflow: hidden; background: #eee; }
+        .guru-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .guru-info { padding: 15px; text-align: center; }
+        .guru-name { font-weight: 700; color: var(--primary-color); margin-bottom: 5px; font-size: 1rem; }
+        .guru-role { color: var(--secondary-color); font-size: 0.9rem; font-weight: 600; }
+
+        /* --- DATA SISWA --- */
+        .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .class-card { background: var(--white); border-radius: var(--radius); padding: 30px 20px; text-align: center; box-shadow: var(--shadow); cursor: pointer; border: 2px solid transparent; transition: 0.3s; }
+        .class-card:hover { border-color: var(--primary-color); background: var(--light-red-bg); }
+        .class-num { font-size: 3rem; font-weight: 800; color: var(--primary-color); display: block; margin-bottom: 10px; opacity: 0.3; }
+        .class-total { font-size: 1.1rem; font-weight: 600; }
+        .click-hint { font-size: 0.8rem; color: var(--secondary-color); margin-top: 10px; display: block; }
+
+        /* --- JADWAL PELAJARAN --- */
+        .schedule-section { background-color: var(--bg-light); }
+        .schedule-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .schedule-card { background: var(--white); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); cursor: pointer; border-left: 5px solid var(--primary-color); transition: 0.3s; }
+        .schedule-card:hover { transform: translateX(5px); background: var(--light-red-bg); }
+        .schedule-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .schedule-class-name { font-weight: 700; color: var(--primary-color); font-size: 1.2rem; }
+        .schedule-icon { color: var(--secondary-color); }
+        .schedule-days-list { font-size: 0.9rem; color: #555; }
+        .schedule-days-list li { margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+        .schedule-days-list li i { width: 20px; text-align: center; color: var(--primary-color); }
+
+        /* --- INFO PPDB --- */
+        .ppdb-section { background-color: var(--white); }
+        .ppdb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .ppdb-item { background: #fafafa; padding: 30px; border-radius: var(--radius); border: 1px solid #eee; text-align: center; }
+        .ppdb-icon-circle { width: 60px; height: 60px; background: var(--light-red-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary-color); font-size: 1.5rem; }
+        .ppdb-title { font-weight: 700; margin-bottom: 15px; font-size: 1.1rem; color: var(--text-dark); }
+        .ppdb-list { text-align: left; font-size: 0.9rem; color: var(--text-light); }
+        .ppdb-list li { margin-bottom: 8px; border-bottom: 1px dashed #ddd; padding-bottom: 8px; }
+
+        /* --- KALENDER PENDIDIKAN --- */
+        .calendar-section { background-color: var(--bg-light); }
+        .calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        .cal-card { background: var(--white); padding: 15px; border-radius: var(--radius); box-shadow: var(--shadow); border-left: 4px solid var(--secondary-color); transition: 0.3s; }
+        .cal-card:hover { border-left-color: var(--primary-color); transform: translateY(-3px); }
+        .cal-date { font-weight: 700; color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 5px; display: block; }
+        .cal-event { font-size: 0.9rem; color: var(--text-dark); font-weight: 600; }
+
+        /* --- STATISTIK TABEL --- */
+        .stats-wrapper { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); overflow-x: auto; }
+        .stats-table { width: 100%; border-collapse: collapse; min-width: 600px; margin-top: 20px; }
+        .stats-table th { background-color: var(--primary-color); color: white; padding: 15px; text-align: left; font-weight: 600; }
+        .stats-table td { padding: 15px; border-bottom: 1px solid #eee; color: var(--text-dark); }
+        .stats-table tr:nth-child(even) { background-color: var(--light-red-bg); }
+        .stats-table tr:hover { background-color: #ffebee; transition: 0.3s; }
+        .stats-total { background-color: #333 !important; color: #fff; font-weight: bold; }
+
+        /* --- BERITA --- */
+        .news-section { background-color: var(--bg-light); }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .news-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; height: 100%; border-top: 4px solid var(--primary-color); transition: 0.3s; }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); cursor: pointer; }
+        .news-img { height: 200px; overflow: hidden; position: relative; }
+        .news-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .news-date-badge { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); color: #fff; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; }
+        .news-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-title { font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
+        .news-desc { font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px; line-height: 1.5; flex-grow: 1; }
+        .read-more { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; align-self: flex-start; }
+
+        /* --- TAUTAN REFERENSI --- */
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+        .link-card { display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--white); padding: 30px 20px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; text-decoration: none; border: 2px solid transparent; transition: 0.3s; }
+        .link-card:hover { transform: translateY(-5px); border-color: var(--primary-color); box-shadow: 0 8px 20px rgba(198, 40, 40, 0.15); }
+        .link-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 15px; transition: 0.3s; }
+        .link-card:hover .link-icon { color: var(--secondary-color); transform: scale(1.1); }
+        .link-title { font-weight: 600; color: var(--text-dark); font-size: 1rem; }
+
+        /* --- MODAL POPUP (UMUM, SISWA, GURU) --- */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center; backdrop-filter: blur(5px); }
+        .modal-content { background-color: var(--white); margin: auto; padding: 30px; border-radius: var(--radius); width: 90%; max-width: 800px; position: relative; animation: slideDown 0.3s ease; max-height: 90vh; display: flex; flex-direction: column; border-top: 5px solid var(--primary-color); }
+        
+        /* Modal Khusus Sarpras */
+        #sarprasModal .modal-content { max-width: 700px; }
+        #sarprasModal img { width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius); margin-bottom: 20px; }
+
+        /* Modal Khusus Guru (PROFIL LENGKAP) */
+        #guruModal .modal-content { max-width: 800px; flex-direction: row; overflow: hidden; padding: 0; border: none; background: #fff; }
+        .guru-modal-left { background: var(--light-red-bg); width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; position: relative; }
+        .guru-modal-left img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 5px solid var(--white); box-shadow: var(--shadow); margin-bottom: 20px; }
+        .guru-modal-right { width: 60%; padding: 40px; overflow-y: auto; }
+        .guru-details-list li { margin-bottom: 15px; display: flex; align-items: flex-start; color: var(--text-dark); border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .guru-details-list li i { color: var(--primary-color); width: 25px; margin-top: 5px; }
+        .guru-details-list li strong { display: block; font-size: 0.85rem; color: #888; margin-bottom: 3px; }
+
+        @keyframes slideDown { from {transform: translateY(-50px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+        #guruModal .close-modal { position: absolute; right: 20px; top: 20px; z-index: 10; background: #fff; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow); }
+        .close-modal { position: absolute; right: 20px; top: 20px; font-size: 28px; font-weight: bold; cursor: pointer; color: #aaa; }
+        .close-modal:hover { color: var(--text-dark); }
+        .modal-header { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; }
+        .modal-header h3 { color: var(--primary-color); margin: 0; font-size: 1.5rem; }
+        .student-list { overflow-y: auto; padding-right: 10px; }
+        .student-list li { padding: 10px 0; border-bottom: 1px dashed #eee; display: flex; align-items: center; }
+        .student-list li::before { content: '\f007'; font-family: 'Font Awesome 5 Free'; margin-right: 10px; color: var(--primary-color); font-size: 0.8rem; }
+
+        /* --- JADWAL MODAL (UPDATED STRUCTURE) --- */
+        #scheduleModal .modal-content { width: 95%; } /* Lebar agar muat 7 kolom */
+        .schedule-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.75rem; }
+        .schedule-table th, .schedule-table td { padding: 8px 4px; border: 1px solid #ddd; text-align: center; }
+        .schedule-table th { background-color: var(--primary-color); color: white; }
+        .schedule-table tr:nth-child(even) { background-color: #f9f9f9; }
+        .schedule-table td { white-space: pre-wrap; } /* Agar teks panjang P5 wrap rapi */
+
+        /* --- GALERI --- */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-item { border-radius: 8px; overflow: hidden; height: 200px; box-shadow: var(--shadow); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        /* --- FOOTER & MAP --- */
+        .map-container { width: 100%; height: 350px; border-radius: var(--radius); overflow: hidden; margin-bottom: 30px; box-shadow: var(--shadow); }
+        footer { background-color: #222; color: #ccc; padding: 60px 0 20px; margin-top: 50px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h3 { color: var(--white); margin-bottom: 20px; font-size: 1.3rem; }
+        .contact-list li { margin-bottom: 15px; display: flex; gap: 15px; }
+        .contact-list i { color: var(--secondary-color); margin-top: 5px; }
+        .copyright { text-align: center; border-top: 1px solid #444; padding-top: 20px; font-size: 0.9rem; }
+
+        /* --- CATATAN KECIL --- */
+        .note-creator { text-align: center; background: var(--white); border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 40px 20px; }
+        .note-creator p { font-size: 0.95rem; color: #666; margin: 5px 0 0; }
+        .note-creator strong { color: var(--primary-color); }
+        .note-icon { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; }
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            padding: 20px 5%;
-            display: flex; /* Penting agar Logo dan Teks berjejer Kiri-Kanan */
-            align-items: center; /* Sejajar vertikal di tengah */
-            justify-content: center;
-            gap: 40px; /* Jarak antara Logo dan Teks */
-            flex-wrap: wrap; /* Agar turun ke bawah jika dibuka di HP */
-        }
-
-        /* --- LOGO HERO (Diperbesar & Digeser) --- */
-        .hero-logo-img {
-            width: 200px; /* Ukuran diperbesar jadi 200px (sebelumnya 130px) */
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid var(--white);
-            object-fit: cover;
-            background-color: white;
-            animation: floatLogo 4s ease-in-out infinite, glowingBorder 3s infinite alternate;
-        }
-
-        /* --- TEKS HERO --- */
-        .hero-text-container {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        }
-
-        .hero-slogan {
-            font-size: 1.5rem; /* Ukuran Slogan */
-            font-weight: bold;
-            color: #e63946; /* Warna Merah agar kontras */
-            font-style: normal;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-        }
-
-        .hero-desc {
-            font-size: 1.1rem; /* Ukuran Deskripsi */
-            margin-bottom: 25px;
-            line-height: 1.4;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-        }
-
-        .cta-btn {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .cta-btn:hover { 
-            background-color: #c92a37; 
-            transform: translateY(-2px); 
-            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
-        }
-
-        /* Mobile Adjustments untuk Hero */
         @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column; /* HP: Logo di atas, Teks di bawah */
-                text-align: center;
-                gap: 20px;
-            }
+            /* GAYA MOBILE (HAMBURGER MENU) */
+            .navbar { padding: 0 15px; height: 80px; } /* Kembali ke tinggi normal di HP */
+            .hamburger { display: block; }
             
-            .hero-logo-img {
-                width: 150px;
-                height: 150px;
+            .nav-links { 
+                position: fixed; 
+                background: var(--white); 
+                height: 100vh; 
+                width: 100%; 
+                top: 0; 
+                right: -100%; 
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: center; 
+                transition: 0.4s; 
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                padding: 0; /* Hapus padding agar menu tidak tergeser */
+                width: 100%;
             }
+            .nav-links.active { right: 0; }
 
-            .hero h1 { font-size: 2rem; }
-            .hero-slogan { font-size: 1.2rem; }
-            .hero-desc { font-size: 1rem; }
-        }
+            /* Hilangkan separator di mobile agar rapi */
+            .nav-links li:not(:last-child)::after { display: none; }
+            .nav-links li { margin: 15px 0; }
 
-        /* --- BRAND SECTION (LOGO) --- */
-        .brands-section {
-            padding: 40px 5%;
-            background: var(--white);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--secondary-color);
-            font-weight: 700;
-        }
-
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 15px;
-            justify-items: center;
-        }
-
-        @media (min-width: 768px) {
-            .brands-grid { grid-template-columns: repeat(6, 1fr); }
-        }
-
-        /* Styling untuk Logo Merek */
-        .brand-item {
-            background: #ffffff; /* Background putih agar logo terlihat jelas */
-            width: 100%;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            transition: var(--transition);
-            border: 1px solid #eee;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            padding: 15px;
-        }
-
-        .brand-item:hover {
-            border-color: var(--primary-color);
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .brand-item img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Agar logo tidak terpotong */
-        }
-
-        /* --- CATALOG SECTION --- */
-        .catalog-section {
-            padding: 50px 5%;
-        }
-
-        .catalog-filters {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: transparent;
-            border: 2px solid var(--secondary-color);
-            color: var(--secondary-color);
-            padding: 8px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--secondary-color);
-            color: var(--white);
-        }
-
-        /* --- STYLE UNTUK SEARCH BAR (TAMBAHAN) --- */
-        .search-container {
-            max-width: 600px;
-            margin: 0 auto 30px auto; /* Tengah, jarak dari tombol filter */
-            display: flex;
-            gap: 10px;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 12px 20px;
-            border: 2px solid var(--secondary-color);
-            border-radius: 30px; /* Agar bulat mengikuti gaya tombol */
-            font-size: 1rem;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .search-input:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 8px rgba(230, 57, 70, 0.2);
-        }
-
-        .search-btn {
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: 30px;
-            padding: 0 25px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .search-btn:hover {
-            background-color: var(--primary-color);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            display: block; 
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.15);
-        }
-
-        .product-image {
-            height: 250px;
-            width: 100%;
-            overflow: hidden;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            aspect-ratio: 1/1;	
-            transition: transform 0.5s ease;
-        }
-
-        .product-image:hover img {
-            transform: scale(1.1);
-        }
-
-        .product-info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .product-category {
-            font-size: 0.8rem;
-            color: #888;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        .product-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-
-        .product-price {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .btn-wa {
-            background-color: #25D366;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            width: 100%;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .btn-wa:hover { background-color: #128C7E; }
-
-        /* --- INFO SECTION --- */
-        .info-section {
-            padding: 50px 5%;
-            background: var(--white);
-            margin-top: 20px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .size-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 0.9rem;
-        }
-
-        .size-table th, .size-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .size-table th { background: var(--secondary-color); color: white; }
-
-        .ongkir-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .ongkir-form input, .ongkir-form select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .ongkir-form button {
-            background: var(--secondary-color);
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* --- LOCATION & PAYMENTS --- */
-        .location-section {
-            padding: 50px 5%;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 400px;
-            background: #ddd;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .payments-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .payment-logo {
-            background: white; /* Biarkan putih agar kontras */
-            border: 1px solid #ddd;
-            padding: 15px 20px; /* Jarak pinggir diperbanyak */
-            border-radius: 8px; /* Sudut dibuat sedikit bulat */
-            display: flex;       /* Penting agar logo berada di tengah */
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .payment-logo img {
-            max-width: 100%;
-            max-height: 50px; /* Batasi tinggi logo supaya tidak raksasa */
-            object-fit: contain;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: var(--secondary-color);
-            color: var(--white);
-            padding: 40px 5%;
-            text-align: center;
-        }
-
-        .footer-info h3 { margin-bottom: 15px; }
-        .footer-info p { margin-bottom: 10px; font-size: 0.9rem; }
-        
-        .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 1.2rem;
-            color: var(--white);
-        }
-
-        .social-links a:hover { color: var(--primary-color); }
-
-        /* --- MODAL --- */
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2000; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
-            background-color: rgba(0,0,0,0.9); 
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 80%;
-            max-height: 80%;
-            border-radius: 5px;
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 1.8rem; }
-            .nav-links { display: none; } 
-            .header { justify-content: center; }
-            .brands-grid { grid-template-columns: repeat(3, 1fr); }
-            .logo-img-wrapper img { height: 40px; }
-            .hero-logo-img { width: 100px; height: 100px; }
-        }
-
-        /* --- STYLE UNTUK SOLDOUT (FIXED) --- */
-        .soldout-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 20; /* Di atas semua */
-            background-color: #e63946; /* Merah */
-            color: white;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            border-radius: 4px;
-            text-transform: uppercase;
-            border: 2px solid white;
-        }
-        
-        /* Mengurangi kecerahan foto agar terlihat tidak aktif */
-        .product-card.soldout .product-image {
-            opacity: 0.7;
-            filter: grayscale(100%); /* Foto jadi hitam putih */
-        }
-
-        /* Tombol WhatsApp jadi abu-abu dan tidak bisa diklik */
-        .btn-wa-soldout {
-            background-color: #ccc;
-            color: #666;
-            cursor: not-allowed;
-            pointer-events: none; /* Mencegah klik */
+            .hero-content h1 { font-size: 1.8rem; }
+            .hero-logo img { width: 60px; padding: 5px; }
+            .sambutan-box { flex-direction: column; text-align: center; gap: 20px; }
+            .sambutan-img { flex: 0 0 auto; max-width: 250px; }
+            .quote-icon { top: 0; left: 50%; transform: translateX(-50%) rotate(90deg); }
+            #sarprasModal .modal-content { width: 95%; padding: 15px; }
+            #sarprasModal img { height: 200px; }
+            #guruModal .modal-content { flex-direction: column; width: 95%; }
+            .guru-modal-left { width: 100%; padding: 30px 15px; background: #fff; }
+            .guru-modal-right { width: 100%; padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-<!-- Structured Data untuk Google Maps -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Yusuf Store 25",
-  "image": "https://z-cdn-media.chatglm.cn/files/8ec0f45f-aac5-4ba4-892b-e32fc8f76ed2.jpg?auth_key=1866751818-2ee6d09ca25a4f69a7f451317a337325-0-f54c5ad6428b8cd184d7f86e07cb76cf",
-  "telephone": "6281375861195",
-  "url": "https://www.instagram.com/yusufstore_25", 
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jln. Merdeka - Kantin",
-    "addressLocality": "Padang Sidimpuan",
-    "addressRegion": "Sumatera Utara",
-    "addressCountry": "ID",
-    "postalCode": "22715"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "11:00",
-    "closes": "22:30"
-  },
-  "priceRange": "Rp150.000 - Rp700.000"
-}
-</script>
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <span><i class="clock"></i> Jam Operasional: 11.00 WIB - 22.30 WIB</span>
-        <span><i class="truck"></i> Melayani Pengiriman Seluruh Indonesia</span>
-    </div>
-
-    <!-- Header & Nav -->
-    <header class="header">
-        <div class="nav-container">
-            <!-- Logo Toko di Header -->
-            <a href="#" class="logo-img-wrapper">
-                <img src="https://z-cdn-media.chatglm.cn/files/8ec0f45f-aac5-4ba4-892b-e32fc8f76ed2.jpg?auth_key=1866751818-2ee6d09ca25a4f69a7f451317a337325-0-f54c5ad6428b8cd184d7f86e07cb76cf" alt="Yusuf Store 25 Logo">
-            </a>
-            <nav class="nav-links">
-                <a href="#hero">Beranda</a>
-                <a href="#catalog">Katalog</a>
-                <a href="#location">Lokasi</a>
-                <a href="https://www.instagram.com/yusufstore_25?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <i class="fas fa-school"></i> SDN 0207 PANGIRKIRAN
+            </div>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#beranda" onclick="closeMenu()">Beranda</a></li>
+                    <li><a href="#sambutan" onclick="closeMenu()">Sambutan</a></li>
+                    <li><a href="#profil" onclick="closeMenu()">Profil</a></li>
+                    <li><a href="#akademik" onclick="closeMenu()">Akademik</a></li>
+                    <li><a href="#guru" onclick="closeMenu()">Guru</a></li>
+                    <li><a href="#siswa" onclick="closeMenu()">Siswa</a></li>
+                    <li><a href="#jadwal" onclick="closeMenu()">Jadwal</a></li>
+                    <li><a href="#ppdb" onclick="closeMenu()">PPDB</a></li>
+                    <li><a href="#statistik" onclick="closeMenu()">Statistik</a></li>
+                    <li><a href="#kalender" onclick="closeMenu()">Kalender</a></li>
+                    <li><a href="#galeri" onclick="closeMenu()">Galeri</a></li>
+                    <li><a href="#berita" onclick="closeMenu()">Berita</a></li>
+                    <li><a href="#tautan" onclick="closeMenu()">Tautan</a></li>
+                    <li><a href="#kontak" onclick="closeMenu()">Kontak</a></li>
+                </ul>
             </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Banner (Gambar Sepatu) -->
-    <section id="hero" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <img src="https://z-cdn-media.chatglm.cn/files/8ec0f45f-aac5-4ba4-892b-e32fc8f76ed2.jpg?auth_key=1866751818-2ee6d09ca25a4f69a7f451317a337325-0-f54c5ad6428b8cd184d7f86e07cb76cf" alt="Yusuf Store 25 Logo" class="hero-logo-img">
-            <h1>Yusuf_Store 25</h1>
-            <p>"Langkah Nyaman, Gaya Terkini"</p>
-            <button class="cta-btn" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">Belanja Sekarang</button>
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <!-- LOGO KIRI: KABUPATEN PADANG LAWAS -->
+        <div class="hero-logo left-logo">
+            <img src="logo-padang-lawas.jpg" alt="Logo Kabupaten Padang Lawas">
+        </div>
+        <!-- Teks Tengah -->
+        <div class="container hero-content">
+            <h1>SD NEGERI 0207 PANGIRKIRAN</h1>
+            <p>Mewujudkan peserta didik yang akhlak mulia, berilmu, berprestasi, dan berwawasan global dengan Kurikulum Merdeka.</p>
+            <a href="#profil" class="btn">Jelajahi Profil</a>
+        </div>
+        <!-- LOGO KANAN: TUT WURI HANDAYANI -->
+        <div class="hero-logo right-logo">
+            <img src="logo-tutwuri.png" alt="Logo Tut Wuri Handayani">
         </div>
     </section>
 
-    <!-- Brand Logos (Gambar Logo Merek) -->
-    <section class="brands-section">
-        <h2 class="section-title">Merek Tersedia</h2>
-        <div class="brands-grid">
-            <!-- Logo Global (Wikimedia) -->
-            <div class="brand-item" onclick="filterByBrand('Adidas')" style="cursor:pointer;"><img src="logo_adidas.jpg" alt="ADIDAS"></div>
-            <div class="brand-item" onclick="filterByBrand('Nike')" style="cursor:pointer;"><img src="logo_nike.jpg" alt="NIKE"></div>
-            <div class="brand-item" onclick="filterByBrand('Onitsuka')" style="cursor:pointer;"><img src="logo_Onitsuka.jpg" alt="ONITSUKA"></div>
-            <div class="brand-item" onclick="filterByBrand('NB')" style="cursor:pointer;"><img src="logo_nb.jpg" alt="NB"></div>
-            <div class="brand-item" onclick="filterByBrand('On cloud')" style="cursor:pointer;"><img src="logo_oncloud.jpg" alt="On Cloud"></div>
-            <div class="brand-item" onclick="filterByBrand('Puma')" style="cursor:pointer;"><img src="logo_puma.jpg" alt="PUMA"></div>
-            <div class="brand-item" onclick="filterByBrand('Ortuseight')" style="cursor:pointer;"><img src="logo_ortus.jpg" alt="Ortus"></div>
-            <div class="brand-item" onclick="filterByBrand('910')" style="cursor:pointer;"><img src="logo_910.jpg" alt="910"></div>
-            <div class="brand-item" onclick="filterByBrand('Skechers')" style="cursor:pointer;"><img src="logo_Skechers.jpg" alt="Skechers"></div>
-            <div class="brand-item" onclick="filterByBrand('Hoka')" style="cursor:pointer;"><img src="logo_hoka.jpg" alt="HOKA"></div>
-            <div class="brand-item" onclick="filterByBrand('Asics')" style="cursor:pointer;"><img src="logo_Asics.jpg" alt="Asics"></div>
-            <div class="brand-item" onclick="filterByBrand('Specs')" style="cursor:pointer;"><img src="logo_specs.jpg" alt="Specs"></div>
-            <div class="brand-item" onclick="filterByBrand('Under Armor')" style="cursor:pointer;"><img src="logo_ua.jpg" alt="Under Armor"></div>
-            <div class="brand-item" onclick="filterByBrand('Le Coq')" style="cursor:pointer;"><img src="lecoq.jpg" alt="Le Coq"></div>
-            <div class="brand-item" onclick="filterByBrand('Saucony')" style="cursor:pointer;"><img src="saucony.jpg" alt="Saucony"></div>
-            <div class="brand-item" onclick="filterByBrand('Converse')" style="cursor:pointer;"><img src="converse.jpg" alt="Converse"></div>
-            <div class="brand-item" onclick="filterByBrand('NoBrand')" style="cursor:pointer;"><img src="nobrand.jpg" alt="Converse"></div>
-        </div>
-        <!-- Tombol Reset untuk menampilkan kembali semua -->
-        <div style="text-align: center; margin-top: 20px;">
-            <button onclick="filterSelection('all')" class="filter-btn">Tampilkan Semua Produk</button>
-        </div>
-    </section>
-
-    <!-- Catalog Section -->
-    <section id="catalog" class="catalog-section">
-        <h2 class="section-title">Katalog Produk</h2>
-        
-        <div class="catalog-filters">
-            <button class="filter-btn active" onclick="filterSelection('all')">SEMUA</button>
-            <button class="filter-btn" onclick="filterSelection('running')">RUNNING</button>
-            <button class="filter-btn" onclick="filterSelection('casual')">CASUAL</button>
-            <button class="filter-btn" onclick="filterSelection('futsal')">FUTSAL</button>
-            <button class="filter-btn" onclick="filterSelection('kaos')">KAOS</button>
-            <button class="filter-btn" onclick="filterSelection('jamtangan')">JAM TANGAN</button>
-        </div>
-
-        <!-- --- KOTAK PENCARIAN (TAMBAHAN) --- -->
-        <div class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="Cari sepatu (Contoh: Nike, Merah, Running)..." onkeyup="searchProduct()">
-            <button class="search-btn" onclick="searchProduct()">🔍</button>
-        </div>
-        <!-- ---------------------------------- -->
-
-        <div class="products-grid">
-            <!-- Produk 1 (Soldout) -->
-            <div class="product-card soldout" data-category="running">
-                <span class="soldout-badge">SOLDOUT</span>
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu1.jpg" alt="NB Elite Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">NB Elite Size 40</h3>
-                    <p class="product-price">Rp 400.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 2 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu2.jpg" alt="Sepatu Le Coq" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Le Coq Size 40</h3>
-                    <p class="product-price">Rp 300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20LeCoq%20Size40." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 3 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu3.jpg" alt="Sepatu Nike" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Nike Pegasus Size 39</h3>
-                    <p class="product-price">Rp 300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20NIke%20Pegasus%20size39." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 4 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos1.jpg" alt="Kaos Oblong" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Puma Premium</h3>
-                    <p class="product-price">Rp 100.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Puma." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 5 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu4.jpg" alt="Sepatu Running" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Asics Magic Speed Size 36</h3>
-                    <p class="product-price">Rp 350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Asics%20Magicspeed%20size36." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 6 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu5.jpg" alt="Sepatu Running" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Adidas SL72 Size 39,40</h3>
-                    <p class="product-price">Rp 290.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%20SL72d%20size." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 7 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu6.jpg" alt="Adidas Ultra Boost Size 42" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Adidas Ultra Boost Size 42</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%20Ultra%20Boost%20Size%2042" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 8 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu7.jpg" alt="Adidas Adizero Pro 4 Size 39" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Adidas Adizero Pro 4 Size 39</h3>
-                    <p class="product-price">Rp.380.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%20Adizero%20Pro%204%20Size%2039" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 9 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu8.jpg" alt="Adidas Ultra Boost Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Adidas Ultra Boost Size 41</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%20Ultra%20Boost%20Size%2041" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 10 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu9.jpg" alt="Puma Nitro Size 42" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Puma Nitro Size 42</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Puma%20Nitro%20Size%2042" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 11 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu10.jpg" alt="Hugo Boss Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Hugo Boss NoBrand Size 40</h3>
-                    <p class="product-price">Rp.400.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Hugo%20Boss%20Size%2040" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 12 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu11.jpg" alt="Puma Nitro Size 43" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Puma Nitro Size 43</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Puma%20Nitro%20Size%2043" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 13 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu12.jpg" alt="910 Nineten Original Size 37" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">910 Nineten Original Size 37</h3>
-                    <p class="product-price">Rp.499.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga Situs Resmi</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20910%20Nineten%20Size%2037" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 14 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu13.jpg" alt="Skechers Size 36" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Skechers Size 36</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Skechers%20Size%2036" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 15 (Soldout) -->
-            <div class="product-card soldout" data-category="Casual">
-                <span class="soldout-badge">SOLDOUT</span>
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu47.jpg" alt="Mizuno Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">Casual</span>
-                    <h3 class="product-title">Mizuno Size 41</h3>
-                    <p class="product-price">Rp.400.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 16 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu15.jpg" alt="Puma Palermo Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Puma Palermo Size 40</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Puma%20Palermo%20Size%2040" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 17 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu16.jpg" alt="Skechers Size 43" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Skechers Size 43</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Skechers%20Size%2043" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 18 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos2.jpg" alt="Kaos Nike Jordan" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Nike Jordan</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Nike@20Jordan." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 19 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos3.jpg" alt="Kaos Under Armor" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Under Armor</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Under@20Armor." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 20 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos4.jpg" alt="Kaos Puma Ferrari" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Puma Ferrari</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Puma@20Ferrari." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 21 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos5.jpg" alt="Kaos Gucci" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Gucci NoBrand</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Gucci." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 22 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos6.jpg" alt="Kaos Gucci" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Gucci NoBrand</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Gucci." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 23 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos7.jpg" alt="Kaos Adidas Cream" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Adidas Cream</h3>
-                    <p class="product-price">Rp 110.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Adidas%20Cream." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 24 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos8.jpg" alt="Kaos Puma MLB" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Puma MLB</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Puma%20MLB." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 25 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos9.jpg" alt="Kaos Puma Ferarri" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Puma Ferarri</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Puma%20Ferarri." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 26 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu17.jpg" alt="Onitsuka Blue Red Size 38" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Onitsuka Blue Red Size 38</h3>
-                    <p class="product-price">Rp.250.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Onitsuka%20Blue%20red%20Size%2038" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 27 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu18.jpg" alt="Onitsuka Mexico 66 Size 38" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Onitsuka Mexico 66 Size 38</h3>
-                    <p class="product-price">Rp.250.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Onitsuka%Mexico66%20Size%2038" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 28 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu19.jpg" alt="Adidas Samba Jane Size 38" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Adidas Samba Jane Size 38</h3>
-                    <p class="product-price">Rp.250.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%Samba%20Jane%20Size%2038" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 29 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu20.jpg" alt="Adidas Samba Jane Putih Size 39" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Adidas Samba Jane Putih Size 39</h3>
-                    <p class="product-price">Rp.250.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%Samba%20Jane%20Putih%20Size%2039" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 30 (Soldout) -->
-            <div class="product-card soldout" data-category="kaos">
-                <span class="soldout-badge">SOLDOUT</span>
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos10.jpg" alt="Kaos TNF Abu" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos TNF Abu NoBrand</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 31 (Soldout) -->
-            <div class="product-card soldout" data-category="kaos">
-                <span class="soldout-badge">SOLDOUT</span>
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos11.jpg" alt="Kaos Adidas panjang" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Adidas panjang</h3>
-                    <p class="product-price">Rp 180.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 32 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos12.jpg" alt="Kaos Hijau Army NoBrand" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Hijau Army</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Hijau%20Army." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 33 -->
-            <div class="product-card" data-category="kaos">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="kaos13.jpg" alt="Kaos Puma Putih" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">kaos</span>
-                    <h3 class="product-title">Kaos Puma Putih</h3>
-                    <p class="product-price">Rp 150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Kaos%20Puma%20Putih." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 34 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu21.jpg" alt="Adidas Samba Putih Size 39" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Adidas Samba Putih Size 39</h3>
-                    <p class="product-price">Rp.160.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%Samba%20Putih%20Size%2039" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 35 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu22.jpg" alt="Asics Magic Speed Size 43,45" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Asics Magic Speed Size 43,45</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Asics%Magic%20Speed%20Size%2043%2045" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 36 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu23.jpg" alt="Asics Abu Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Asics Abu Size 41</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Asics%Abu%20Size%2041" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 37 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu24.jpg" alt="Asics Abu Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Asics Biru Size 39</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Asics%Biru%20Size%2039" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 38 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu25.jpg" alt="Asics Dark Green Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Asics Dark Green Size 41</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Asics%20Dark%20Green%20Size%2041" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 39 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu26.jpg" alt="Under Armor Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Under Armor Size 40</h3>
-                    <p class="product-price">Rp.400.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Under%20Armor%20Size%2040" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 40 -->
-            <div class="product-card" data-category="futsal">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu27.jpg" alt="Ortuseight Original Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">futsal</span>
-                    <h3 class="product-title">Ortuseight Original Size 40</h3>
-                    <p class="product-price">Rp.299.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga Situs Resmi</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Ortuseight%20Original%20Futsal%20Size%2040" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 41 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu28.jpg" alt="NB Elit Size 37" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">NB Elit Size 37</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20NB%20Elit%20Size%2037" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 42 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu29.jpg" alt="NB 8010 Size 42" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">NB 8010 Size 42</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20NB%208010%20Size%2042" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 43 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan1.jpg" alt="Swiss Army 9205" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">Swiss Army 9205</h3>
-                    <p class="product-price">Rp.320.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20Swiss%20Army%209205" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 44 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu30.jpg" alt="Hugo BOss Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Hugo Boss NoBrand Size 40</h3>
-                    <p class="product-price">Rp.400.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Hugo%20Boss%20Size%2040" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 45 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu31.jpg" alt="Hoka Toska Size 38" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Hoka Toska Size 38</h3>
-                    <p class="product-price">Rp.320.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Hoka%20Toska%20Size%2038" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 46 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu32.jpg" alt="Eiger Original Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Eiger Original NoBrand Size 40</h3>
-                    <p class="product-price">Rp.800.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga Situs Resmi</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Eiger%20Original%20Size%2040" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 47 -->
-            <div class="product-card soldout" data-category="casual">
-		 <span class="soldout-badge">SOLDOUT</span>
-                 <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu33.jpg" alt="Hugo Boss Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Hugo Boss NoBrand Size 41</h3>
-                    <p class="product-price">Rp.400.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 48 -->
-            <div class="product-card" data-category="futsal">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu34.jpg" alt="Specs Stabilo Size 42" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">futsal</span>
-                    <h3 class="product-title">Specs Stabilo Size 42</h3>
-                    <p class="product-price">Rp.200.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Specs%20Stabilo%20Futsal%20Size%2042" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 49 -->
-            <div class="product-card" data-category="futsal">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu35.jpg" alt="Adidas Futsal Size 38,39" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">futsal</span>
-                    <h3 class="product-title">Adidas Futsal Size 38,39</h3>
-                    <p class="product-price">Rp.160.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%20Hitam%20Futsal%20Size%2038%2039" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 50 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu36.jpg" alt="Asic Novablast 3 Size 39" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Asic Novablast 3 Size 39</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Asic%20Novablast%203%20Size%2039" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 51 -->
-            <div class="product-card" data-category="futsal">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu37.jpg" alt="NIke Futsal Size 37" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">futsal</span>
-                    <h3 class="product-title">NIke Futsal Size 37</h3>
-                    <p class="product-price">Rp.220.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Hitam%20Futsal%20Size%2037" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 52 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu38.jpg" alt="NIke SB Size 41,43" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">NIke SB Size 41,43</h3>
-                    <p class="product-price">Rp.250.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20SB%20Size%2041%2043" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 53 (Soldout) -->
-            <div class="product-card soldout" data-category="casual">
-                <span class="soldout-badge">SOLDOUT</span>
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu48.jpg" alt="NB 1500 Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">NB 1500 Size 40</h3>
-                    <p class="product-price">Rp.380.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 54 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu40.jpg" alt="Nike Cewek Size 39" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Nike Cewek Size 39</h3>
-                    <p class="product-price">Rp.220.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Cewek%20Size%2039" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 55 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu41.jpg" alt="Saucony Size 43" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Saucony Size 43</h3>
-                    <p class="product-price">Rp.350.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Saucony%20Size%2043" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 56 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu42.jpg" alt="Nike Struktur 25 Size 43" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Nike Struktur 25 Size 43</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Struktur%2025%20Size%2043" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 57 -->
-            <div class="product-card soldout" data-category="casual">
-                 <span class="soldout-badge">SOLDOUT</span>
-        <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu49.jpg" alt="Samba Kuning Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Samba Kuning Size 40</h3>
-                    <p class="product-price">Rp.300.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 58 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan2.jpg" alt="G-shock Kuning" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">G-shock Kuning</h3>
-                    <p class="product-price">Rp.180.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20G-shock%20Kuning" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 59 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan3.jpg" alt="Jam Cewek Cream" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">Jam Cewek Cream</h3>
-                    <p class="product-price">Rp.140.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20Cewek%20Cream" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 60 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan4.jpg" alt="Evans Jayden" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">Evans Jayden</h3>
-                    <p class="product-price">Rp.200.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20Evans%20Jayden" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 61 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan5.jpg" alt="Jam Cewek MK" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">Jam Cewek MK</h3>
-                    <p class="product-price">Rp.150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20Cewek%20MK" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 62 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan6.jpg" alt="Jam Cewek Antroid 2 tali" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">Jam Cewek Antroid 2 tali</h3>
-                    <p class="product-price">Rp.250.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20Cewek%20Android" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 63 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan7.jpg" alt="G-shock Casio" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">G-shock Casio</h3>
-                    <p class="product-price">Rp.100.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20G-shock%20Casio" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 64 -->
-            <div class="product-card" data-category="jamtangan">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="jamtangan8.jpg" alt="Jam Cewek Silver" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">jamtangan</span>
-                    <h3 class="product-title">Jam Cewek Silver</h3>
-                    <p class="product-price">Rp.150.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Jamtangan%20Cewek%20Silver" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 65 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu44.jpg" alt="Nike Alphafly 3 Size 43" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Nike Alphafly 3 Size 43</h3>
-                    <p class="product-price">Rp.450.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Alphafly%203%20Size%2043" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 66 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu45.jpg" alt="Lacoste Size 42" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Lacoste NoBrand Size 42</h3>
-                    <p class="product-price">Rp.400.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Lacoste%20Size%2042" target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 67 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu46.jpg" alt="Sepatu Running Nike" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Nike Vomero Size 43</h3>
-                    <p class="product-price">Rp 300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Vomero%20Size43." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 68 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu14.jpg" alt="Asics Tokyo Size 38" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Asics Tokyo Size 38</h3>
-                    <p class="product-price">Rp 300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Asics%20Tokyo%20Size38." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 69 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu39.jpg" alt="Adidas Samba Size 39" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Adidas Samba Size 39</h3>
-                    <p class="product-price">Rp 220.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%20Samba%20Size39." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 70 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu43.jpg" alt="NIke Air Zoom Size 43" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">NIke Air Zoom Size 43</h3>
-                    <p class="product-price">Rp 300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Air%20Zoom%20Size43." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 71 -->
-            <div class="product-card soldout" data-category="casual">
-		<span class="soldout-badge">SOLDOUT</span>
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu57.jpg" alt="Converse Cewek Size 37" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Converse Cewek Size 37</h3>
-                    <p class="product-price">Rp 200.000</p>
-                    <a href="#" class="btn-wa btn-wa-soldout">Habis</a>
-                </div>
-            </div>
-
-            <!-- Produk 72 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu58.jpg" alt="Converse Cewek Size 38" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Converse Cewek Size 38</h3>
-                    <p class="product-price">Rp 200.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Converse%20Cewek%20Size38." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 73 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu50.jpg" alt="Hoka Black Size 42" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Hoka Full Black Size 42</h3>
-                    <p class="product-price">Rp 320.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Hoka%20Black%20Size42." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 74 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu59.jpg" alt="On Cloud Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">On Cloud Size 41</h3>
-                    <p class="product-price">Rp 300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20On%20Cloud%20Size41." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 75 -->
-            <div class="product-card" data-category="running">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu51.jpg" alt="Nike Putih Size 36" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">running</span>
-                    <h3 class="product-title">Nike Putih Size 36</h3>
-                    <p class="product-price">Rp 270.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Putih%20Size36." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 76 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu52.jpg" alt="Puma Speetcat Size 37" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Puma Speetcat Size 37</h3>
-                    <p class="product-price">Rp 300.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Puma%20Speetcat%20Size37." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 77 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu53.jpg" alt="Nike Bunglon Size 36" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Nike Putih Size 36</h3>
-                    <p class="product-price">Rp 270.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Nike%20Bunglon%20Size36." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 78 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu54.jpg" alt="Onitsuka Tiger Size 40" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Onitsuka Tiger Size 40</h3>
-                    <p class="product-price">Rp 250.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Onitsuka%20Tiger%20Size40." target="_blank" class="btn-wa">Beli via WA</a>
-                </div>
-            </div>
-
-            <!-- Produk 79 -->
-            <div class="product-card" data-category="casual">
-                <div class="product-image" onclick="openModal(this)">
-                    <img src="sepatu55.jpg" alt="Adidas Colektor Size 41" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">casual</span>
-                    <h3 class="product-title">Adidas Colektor Size 41</h3>
-                    <p class="product-price">Rp 270.000</p>
-                    <small style="color: green; font-weight: bold; display: block; margin-top: 5px;">Harga masih bisa nego chat admin</small>
-                    <a href="https://wa.me/6281375861195?text=Halo%20Yusuf%20Store%2025,%20saya%20tertarik%20dengan%20Adidas%20Colektor%20Size41." target="_blank" class="btn-wa">Beli via WA</a>
+    <!-- SAMBUTAN KEPALA SEKOLAH -->
+    <section id="sambutan" class="sambutan-section">
+        <div class="container">
+            <div class="sambutan-box">
+                <div class="sambutan-img">
+                    <!-- Menggunakan foto yang sama dengan di kartu profil -->
+                    <img src="nuraini1.jpg" alt="Foto Kepala Sekolah">
+                </div>
+                <div class="sambutan-content">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <h3>Sambutan Kepala Sekolah</h3>
+                    <div class="sambutan-text">
+                        <p>Assalamu'alaikum Warahmatullahi Wabarakatuh,</p>
+                        <p>Selamat datang di Website Resmi SD Negeri 0207 Pangirkiran. Kami mengucapkan rasa syukur atas kepercayaan yang diberikan oleh masyarakat Desa Pangirkiran Dolok dan Kecamatan Barumun Tengah.</p>
+                        <p>Dalam era digital ini, website kami hadir sebagai sarana informasi dan komunikasi antara sekolah, orang tua, dan masyarakat. Kami berkomitmen untuk terus meningkatkan mutu pendidikan, baik dari sisi kurikulum maupun akhlak mulia peserta didik.</p>
+                        <p>Kami mengajak seluruh warga sekolah untuk terus berkarya, berinovasi, dan beradaptasi dengan perkembangan zaman demi kemajuan putra-putri bangsa tercinta.</p>
+                    </div>
+                    <div class="sambutan-sign">- Nuraini Nasution, S.Pd.I</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Info Section: Size Guide & Ongkir -->
-    <section class="info-section">
-        <h2 class="section-title">Informasi Toko</h2>
-        <div class="info-grid">
-            <div class="info-block">
-                <h3>📏 Panduan Ukuran (Size Guide)</h3>
-                <table class="size-table">
-                    <thead>
-                        <tr>
-                            <th>EU</th>
-                            <th>UK</th>
-                            <th>US</th>
-                            <th>CM (Panjang Kaki)</th>
-                        </tr>
-                    </thead>
+    <!-- Profil Section -->
+    <section id="profil">
+        <div class="container">
+            <h2>Profil Sekolah</h2>
+            <div class="about-grid">
+                <div>
+                    <p><strong>SD Negeri 0207 Pangirkiran</strong> beralamat di Desa Pangirkiran Dolok, Kecamatan Barumun Tengah, Kabupaten Padang Lawas. Secara geografis, sekolah ini terletak di daerah dataran tinggi yang sejuk.</p>
+		    <p>Tenaga Pendidik di sekolah ini alumni sarjana dari Perguruan tinggi dan sudah tersertifikasi.
+Siswa di SD Negeri 0207 Pangirkiran berasal dari Desa Pangirkiran Dolok dan Desa Janji Raja yang berjumlah kurang lebih 117 orang.</p>	
+		    <p>Kegiatan KBM berlangsung selama 6 (enam) Hari senin sampai dengan Sabtu, dan memiliki kegiatan Estrakurikuler Pramuka,Seni,dan Olah Raga.</p>
+                    <p>Sekolah ini berstatus negeri dengan <strong>NPSN 10207504</strong>. Berdiri sejak tahun <strong>1977</strong> dan memiliki akreditasi <strong>C</strong>.</p>
+                    
+                    <div>
+                        <span class="info-badge"><i class="fas fa-building"></i> Negeri</span>
+                        <span class="info-badge"><i class="fas fa-calendar-alt"></i> Est. 1977</span>
+                        <span class="info-badge"><i class="fas fa-certificate"></i> Akreditasi C</span>
+                        <span class="info-badge"><i class="fas fa-map-marker-alt"></i> Dataran Tinggi</span>
+                    </div>
+                </div>
+
+                <div class="headmaster-card">
+                    <img src="nuraini.jpg" alt="Nuraini Nasution, S.Pd.I" class="headmaster-img">
+                    <h3>Nuraini Nasution, S.Pd.I</h3>
+                    <p>Kepala Sekolah</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">"Pimpinan yang berkomitmen untuk meningkatkan kualitas pendidikan dan karakter siswa."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi Misi & Kurikulum -->
+    <section id="akademik" class="visi-misi-section">
+        <div class="container">
+            <div class="visi-box">
+                <i class="fas fa-quote-left fa-2x" style="opacity: 0.3; margin-bottom: 20px;"></i>
+                <h3>Visi Sekolah</h3>
+                <p style="color: #fff; font-size: 1.4rem; font-style: italic;">"Terwujudnya Peserta Didik Yang Akhlak Mulia Berilmu Berprestasi Dan Berwawasan Global"</p>
+            </div>
+
+            <h2>Misi Sekolah</h2>
+            <div class="misi-container">
+                <ul class="misi-list">
+                    <li>Menanamkan keimanan dan ketakwaan melalui pengamalan ajaran agama</li>
+                    <li>Mengoptimalkan proses belajar dan bimbingan</li>
+                    <li>Mengembangkan minat bakat dan potensi Peserta Didik</li>
+                    <li>Menjalin Kerjasama yang Harmonis Antar warga Sekolah dan Lembaga Lain yang Terkait</li>
+                </ul>
+            </div>
+
+            <div class="kurikulum-box">
+                <h3><i class="fas fa-book-reader"></i> Kurikulum Merdeka</h3>
+                <p>SD Negeri 0207 Pangirkiran menerapkan <strong>Kurikulum Merdeka</strong> yang berfokus pada pengembangan karakter Profil Pelajar Pancasila.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sarpras & Ekskul -->
+    <section id="sarpras">
+        <div class="container">
+            <h2>Sarana & Prasarana</h2>
+            <p style="text-align: center;">Klik pada kartu di bawah untuk melihat foto.</p>
+            <div class="grid-3">
+                <div class="card sarpras-card" onclick="openSarprasModal(1)">
+                    <i class="fas fa-chalkboard-teacher card-icon"></i>
+                    <h4>Ruang Belajar</h4>
+                    <p>Kondisi nyaman dan kondusif untuk KBM.</p>
+                </div>
+                <div class="card sarpras-card" onclick="openSarprasModal(2)">
+                    <i class="fas fa-users card-icon"></i>
+                    <h4>Ruang Guru</h4>
+                    <p>Tempat koordinasi dan persiapan mengajar.</p>
+                </div>
+                <div class="card sarpras-card" onclick="openSarprasModal(3)">
+                    <i class="fas fa-book card-icon"></i>
+                    <h4>Perpustakaan</h4>
+                    <p>Koleksi buku untuk menunjang literasi siswa.</p>
+                </div>
+                <div class="card sarpras-card" onclick="openSarprasModal(4)">
+                    <i class="fas fa-desktop card-icon"></i>
+                    <h4>Lab Komputer</h4>
+                    <p>Sarana pengenalan teknologi informasi.</p>
+                </div>
+                <div class="card sarpras-card" onclick="openSarprasModal(5)">
+                    <i class="fas fa-restroom card-icon"></i>
+                    <h4>Toilet Bersih</h4>
+                    <p>Fasilitas kebersihan yang terjaga.</p>
+                </div>
+                <div class="card sarpras-card" onclick="openSarprasModal(6)">
+                    <i class="fas fa-running card-icon"></i>
+                    <h4>Lapangan Olahraga</h4>
+                    <p>Area untuk kegiatan fisik dan upacara.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ekskul" style="background-color: #fff;">
+        <div class="container">
+            <h2>Ekstrakurikuler</h2>
+            <div class="grid-3">
+                <div class="ekskul-item">
+                    <img src="https://picsum.photos/seed/sports/400/300" alt="Olahraga">
+                    <div class="ekskul-overlay">
+                        <h4>Olahraga</h4>
+                        <p>Mengembangkan fisik dan sportivitas.</p>
+                    </div>
+                </div>
+                <div class="ekskul-item">
+                    <img src="https://picsum.photos/seed/dance/400/300" alt="Seni Tari">
+                    <div class="ekskul-overlay">
+                        <h4>Seni Tari</h4>
+                        <p>Melestarikan budaya daerah.</p>
+                    </div>
+                </div>
+                <div class="ekskul-item">
+                    <img src="https://picsum.photos/seed/scouts/400/300" alt="Pramuka">
+                    <div class="ekskul-overlay">
+                        <h4>Pramuka</h4>
+                        <p>Membentuk karakter mandiri dan disiplin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Guru -->
+    <section id="guru">
+        <div class="container">
+            <h2>Tenaga Pendidik & Tenaga Kependidikan</h2>
+            <p style="text-align: center;">Klik pada foto guru untuk melihat profil lengkap.</p>
+            <div class="grid-3">
+                <!-- Guru Cards (Loop JS for clean code) -->
+                <div class="guru-card" onclick="openGuruModal(1)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru1/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Warda Kembang Bunga Harahap</div><div class="guru-role">Guru Kelas 3</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(2)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru2/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Adanan Siregar</div><div class="guru-role">Guru SBK</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(3)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru3/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Sofyan Tanjung</div><div class="guru-role">Guru Mapel PJOK</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(4)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru4/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Tirohima Harahap</div><div class="guru-role">Guru Kelas 1</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(5)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru5/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Rokimah Siregar</div><div class="guru-role">Guru Kelas 2</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(6)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru6/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Hotmaida Pohan</div><div class="guru-role">Guru Kelas 4</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(7)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru7/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Rosmina Tamba</div><div class="guru-role">Guru Mapel PAI</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(8)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru8/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Nora Hanifah Pane</div><div class="guru-role">Guru Kelas 6</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(9)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru9/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Rukiatul Marjulia Ujung</div><div class="guru-role">Guru Kelas 5</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(10)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru10/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Syaroh Silitonga</div><div class="guru-role">Guru Mapel B. Ing</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(11)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru11/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Siti Hoyriya Harahap</div><div class="guru-role">Guru P5</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(12)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/guru12/300/300" alt="Foto Guru"></div><div class="guru-info"><div class="guru-name">Romaito Harahap</div><div class="guru-role">Guru Mapel Seni Tari</div></div></div>
+                <div class="guru-card" onclick="openGuruModal(13)"><div class="guru-img-wrapper"><img src="https://picsum.photos/seed/staf1/300/300" alt="Foto Staf"></div><div class="guru-info"><div class="guru-name">Muhammad Johan Pohan</div><div class="guru-role">Penjaga Sekolah</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Siswa -->
+    <section id="siswa" style="background-color: #fff;">
+        <div class="container">
+            <h2>Data Siswa</h2>
+            <p style="text-align: center;">Klik pada kartu kelas untuk melihat daftar nama siswa.</p>
+            <div class="class-grid">
+                <div class="class-card" onclick="openModal(1)"><span class="class-num">1</span><div class="class-total">22 Siswa</div><span class="click-hint"><i class="fas fa-hand-pointer"></i> Lihat Nama</span></div>
+                <div class="class-card" onclick="openModal(2)"><span class="class-num">2</span><div class="class-total">13 Siswa</div><span class="click-hint"><i class="fas fa-hand-pointer"></i> Lihat Nama</span></div>
+                <div class="class-card" onclick="openModal(3)"><span class="class-num">3</span><div class="class-total">25 Siswa</div><span class="click-hint"><i class="fas fa-hand-pointer"></i> Lihat Nama</span></div>
+                <div class="class-card" onclick="openModal(4)"><span class="class-num">4</span><div class="class-total">20 Siswa</div><span class="click-hint"><i class="fas fa-hand-pointer"></i> Lihat Nama</span></div>
+                <div class="class-card" onclick="openModal(5)"><span class="class-num">5</span><div class="class-total">16 Siswa</div><span class="click-hint"><i class="fas fa-hand-pointer"></i> Lihat Nama</span></div>
+                <div class="class-card" onclick="openModal(6)"><span class="class-num">6</span><div class="class-total">22 Siswa</div><span class="click-hint"><i class="fas fa-hand-pointer"></i> Lihat Nama</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JADWAL PELAJARAN -->
+    <section id="jadwal" class="schedule-section">
+        <div class="container">
+            <h2>Jadwal Pelajaran</h2>
+            <p style="text-align: center;">Klik pada kartu kelas untuk melihat jadwal lengkap (Jam vs Hari).</p>
+            <div class="schedule-wrapper">
+                <div class="schedule-card" onclick="openScheduleModal(1)">
+                    <div class="schedule-header"><span class="schedule-class-name">Kelas 1</span><i class="fas fa-calendar-alt schedule-icon"></i></div>
+                    <ul class="schedule-days-list"><li><i class="fas fa-clock"></i> 6 Jam Pelajaran per Hari</li></ul>
+                </div>
+                <div class="schedule-card" onclick="openScheduleModal(2)">
+                    <div class="schedule-header"><span class="schedule-class-name">Kelas 2</span><i class="fas fa-calendar-alt schedule-icon"></i></div>
+                    <ul class="schedule-days-list"><li><i class="fas fa-clock"></i> 6 Jam Pelajaran per Hari</li></ul>
+                </div>
+                <div class="schedule-card" onclick="openScheduleModal(3)">
+                    <div class="schedule-header"><span class="schedule-class-name">Kelas 3</span><i class="fas fa-calendar-alt schedule-icon"></i></div>
+                    <ul class="schedule-days-list"><li><i class="fas fa-clock"></i> 7 Jam Pelajaran per Hari</li></ul>
+                </div>
+                <div class="schedule-card" onclick="openScheduleModal(4)">
+                    <div class="schedule-header"><span class="schedule-class-name">Kelas 4</span><i class="fas fa-calendar-alt schedule-icon"></i></div>
+                    <ul class="schedule-days-list"><li><i class="fas fa-clock"></i> 7 Jam Pelajaran per Hari</li></ul>
+                </div>
+                <div class="schedule-card" onclick="openScheduleModal(5)">
+                    <div class="schedule-header"><span class="schedule-class-name">Kelas 5</span><i class="fas fa-calendar-alt schedule-icon"></i></div>
+                    <ul class="schedule-days-list"><li><i class="fas fa-clock"></i> 7 Jam Pelajaran per Hari</li></ul>
+                </div>
+                <div class="schedule-card" onclick="openScheduleModal(6)">
+                    <div class="schedule-header"><span class="schedule-class-name">Kelas 6</span><i class="fas fa-calendar-alt schedule-icon"></i></div>
+                    <ul class="schedule-days-list"><li><i class="fas fa-clock"></i> 6 Jam Pelajaran per Hari</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTIK -->
+    <section id="statistik">
+        <div class="container">
+            <h2>Statistik Penerimaan Siswa</h2>
+            <p style="text-align: center;">Data penerimaan siswa baru dalam 5 tahun terakhir.</p>
+            <div class="stats-wrapper">
+                <table class="stats-table">
+                    <thead><tr><th>No</th><th>Tahun Ajaran</th><th>Laki-laki</th><th>Perempuan</th><th>Total Siswa</th></tr></thead>
                     <tbody>
-                        <tr><td>39</td><td>6</td><td>7</td><td>24.5</td></tr>
-                        <tr><td>40</td><td>6.5</td><td>7.5</td><td>25.0</td></tr>
-                        <tr><td>41</td><td>7</td><td>8</td><td>25.5</td></tr>
-                        <tr><td>42</td><td>8</td><td>9</td><td>26.5</td></tr>
-                        <tr><td>43</td><td>9</td><td>10</td><td>27.5</td></tr>
-                        <tr><td>44</td><td>9.5</td><td>10.5</td><td>28.0</td></tr>
+                        <tr><td>1</td><td>2021/2022</td><td>6</td><td>10</td><td>16</td></tr>
+                        <tr><td>2</td><td>2022/2023</td><td>10</td><td>10</td><td>20</td></tr>
+                        <tr><td>3</td><td>2023/2024</td><td>12</td><td>13</td><td>25</td></tr>
+                        <tr><td>4</td><td>2024/2025</td><td>5</td><td>13</td><td>18</td></tr>
+                        <tr><td>5</td><td>2025/2026</td><td>12</td><td>10</td><td>21</td></tr>
+                        <tr class="stats-total"><td colspan="4" style="text-align: right;">Total 5 Tahun:</td><td>100 Siswa</td></tr>
                     </tbody>
                 </table>
             </div>
+        </div>
+    </section>
 
-            <div class="info-block">
-                <h3>🚚 Cek Ongkir</h3>
-                <p style="font-size:0.9rem; margin-bottom:10px;">Masukkan kota tujuan, admin akan cekkan biayanya via WhatsApp.</p>
-                <form class="ongkir-form" onsubmit="cekOngkir(event)">
-                    <input type="text" id="kota-tujuan" placeholder="Kota / Kecamatan Tujuan" required>
-                    <select id="kurir">
-                        <option value="JNE">JNE</option>
-                        <option value="J&T">J&T Express</option>
-                        <option value="Sicepat">Sicepat</option>
-                    </select>
-                    <button type="submit">Cek Sekarang</button>
-                </form>
+    <!-- INFO PPDB -->
+    <section id="ppdb" class="ppdb-section">
+        <div class="container">
+            <h2>Info PPDB / Penerimaan</h2>
+            <p style="text-align: center;">Informasi lengkap penerimaan peserta didik baru SDN 0207 Pangirkiran.</p>
+            <div class="ppdb-grid">
+                <div class="ppdb-item">
+                    <div class="ppdb-icon-circle"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="ppdb-title">Syarat Daftar</h3>
+                    <ul class="ppdb-list"><li>Usia minimal 6 tahun per 1 Juli.</li><li>Fotokopi Kartu Keluarga (KK).</li><li>Fotokopi Akta Kelahiran.</li></ul>
+                </div>
+                <div class="ppdb-item">
+                    <div class="ppdb-icon-circle"><i class="fas fa-clock"></i></div>
+                    <h3 class="ppdb-title">Waktu Pendaftaran</h3>
+                    <ul class="ppdb-list"><li>Bulan Mei - Agustus</li><li>Senin - Jumat</li><li>Pukul 08:00 - 14:00 WIB</li></ul>
+                </div>
+                <div class="ppdb-item">
+                    <div class="ppdb-icon-circle"><i class="fas fa-map-marked"></i></div>
+                    <h3 class="ppdb-title">Lokasi</h3>
+                    <ul class="ppdb-list"><li>Kantor Sekolah</li><li>Hubungi Panitia PPDB</li><li>Nomor Kontak: (0812xxxx)</li></ul>
+                </div>
+                <div class="ppdb-item">
+                    <div class="ppdb-icon-circle"><i class="fas fa-folder-open"></i></div>
+                    <h3 class="ppdb-title">Kelengkapan</h3>
+                    <ul class="ppdb-list"><li>Formulir PPDB</li><li>Pas Foto Berwarnah</li><li>Konfirmasi Wali Kelas</li></ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Location Map & Payments -->
-    <section id="location" class="location-section">
-        <h2 class="section-title">Lokasi & Pembayaran</h2>
-        <div class="map-container">
-            <iframe 
-                src="https://maps.google.com/maps?q=1.3759020665545012, 99.27329924966573&hl=id&z=15&output=embed" 
-                allowfullscreen="" loading="lazy">
-            </iframe>
+    <!-- KALENDER PENDIDIKAN (UPDATED) -->
+    <section id="kalender" class="calendar-section">
+        <div class="container">
+            <h2>Kalender Pendidikan</h2>
+            
+            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 30px; margin-top: 50px;">Agenda Tahun 2025</h3>
+            <div class="calendar-grid">
+                <div class="cal-card"><span class="cal-date">1-12 Juli 2025</span><div class="cal-event">Libur Semester Genap</div></div>
+                <div class="cal-card"><span class="cal-date">14 Juli 2025</span><div class="cal-event">Hari Pertama Sekolah</div></div>
+                <div class="cal-card"><span class="cal-date">14-16 Juli 2025</span><div class="cal-event">MPLS</div></div>
+                <div class="cal-card"><span class="cal-date">17 Agustus 2025</span><div class="cal-event">HUT RI ke-80</div></div>
+                <div class="cal-card"><span class="cal-date">5 September 2025</span><div class="cal-event">Maulid Nabi Muhammad SAW</div></div>
+                <div class="cal-card"><span class="cal-date">15-20 September 2025</span><div class="cal-event">Ujian Tengah Semester</div></div>
+                <div class="cal-card"><span class="cal-date">22-25 September 2025</span><div class="cal-event">ANBK Tahap 1</div></div>
+                <div class="cal-card"><span class="cal-date">29-30 September 2025</span><div class="cal-event">ANBK Tahap 2</div></div>
+                <div class="cal-card"><span class="cal-date">1-2 Oktober 2025</span><div class="cal-event">ANBK Tahap 2 (Susulan)</div></div>
+                <div class="cal-card"><span class="cal-date">8-13 Desember 2025</span><div class="cal-event">Ujian Semester Ganjil</div></div>
+                <div class="cal-card"><span class="cal-date">20 Desember 2025</span><div class="cal-event">Penerimaan Raport</div></div>
+                <div class="cal-card"><span class="cal-date">22-31 Desember 2025</span><div class="cal-event">Libur Semester Ganjil</div></div>
+                <div class="cal-card"><span class="cal-date">25-26 Desember 2025</span><div class="cal-event">Hari Raya Natal</div></div>
+            </div>
+
+            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 30px; margin-top: 50px;">Agenda Tahun 2026</h3>
+            <div class="calendar-grid">
+                <div class="cal-card"><span class="cal-date">1 Januari 2026</span><div class="cal-event">Tahun Baru Masehi 2026</div></div>
+                <div class="cal-card"><span class="cal-date">2-3 Januari 2026</span><div class="cal-event">Libur Semester Ganjil</div></div>
+                <div class="cal-card"><span class="cal-date">5 Januari 2026</span><div class="cal-event">Hari Pertama Semester Genap</div></div>
+                <div class="cal-card"><span class="cal-date">16 Januari 2026</span><div class="cal-event">Isra Mikraj 1447 H</div></div>
+                <div class="cal-card"><span class="cal-date">17 Februari 2026</span><div class="cal-event">Tahun Baru Imlek</div></div>
+                <div class="cal-card"><span class="cal-date">16-21 Februari 2026</span><div class="cal-event">Libur Awal Ramadhan 1447 H</div></div>
+                <div class="cal-card"><span class="cal-date">2-7 Maret 2026</span><div class="cal-event">Ujian Tengah Semester</div></div>
+                <div class="cal-card"><span class="cal-date">9-14 Maret 2026</span><div class="cal-event">Kegiatan Ramadhan/Keagamaan</div></div>
+                <div class="cal-card"><span class="cal-date">16-18 Maret 2026</span><div class="cal-event">Libur Ramadhan 1447 H</div></div>
+                <div class="cal-card"><span class="cal-date">19 Maret 2026</span><div class="cal-event">Idul Fitri 1447 H</div></div>
+                <div class="cal-card"><span class="cal-date">19 Maret 2026</span><div class="cal-event">Hari Raya Nyepi</div></div>
+                <div class="cal-card"><span class="cal-date">20-25 Maret 2026</span><div class="cal-event">Libur Idul Fitri 1447 H</div></div>
+                <div class="cal-card"><span class="cal-date">26 Maret 2026</span><div class="cal-event">Hari Pertama Sekolah (Setelah Lebaran)</div></div>
+                <div class="cal-card"><span class="cal-date">3 April 2026</span><div class="cal-event">Wafat Yesus Kristus</div></div>
+                <div class="cal-card"><span class="cal-date">1 Mei 2026</span><div class="cal-event">Hari Buruh</div></div>
+                <div class="cal-card"><span class="cal-date">14 Mei 2026</span><div class="cal-event">Kenaikan Yesus Kristus</div></div>
+                <div class="cal-card"><span class="cal-date">18-23 Mei 2026</span><div class="cal-event">ASSP Kelas VI</div></div>
+                <div class="cal-card"><span class="cal-date">26-28 Mei 2026</span><div class="cal-event">Libur Khusus Idul Adha 1447 H</div></div>
+                <div class="cal-card"><span class="cal-date">27 Mei 2026</span><div class="cal-event">Hari Raya Idul Adha 1447 H</div></div>
+                <div class="cal-card"><span class="cal-date">31 Mei 2026</span><div class="cal-event">Hari Raya Waisak</div></div>
+                <div class="cal-card"><span class="cal-date">1 Juni 2026</span><div class="cal-event">Hari Lahir Pancasila</div></div>
+                <div class="cal-card"><span class="cal-date">2 Juni 2026</span><div class="cal-event">Pengumuman Kelulusan</div></div>
+                <div class="cal-card"><span class="cal-date">8-13 Juni 2026</span><div class="cal-event">Ujian Semester Genap</div></div>
+                <div class="cal-card"><span class="cal-date">16 Juni 2026</span><div class="cal-event">Tahun Baru Hijriah 1448 H</div></div>
+                <div class="cal-card"><span class="cal-date">20 Juni 2026</span><div class="cal-event">Penerimaan Raport</div></div>
+                <div class="cal-card"><span class="cal-date">22-30 Juni 2026</span><div class="cal-event">Libur Semester Genap</div></div>
+            </div>
         </div>
-        <h3 style="text-align: center;">Metode Pembayaran Tersedia</h3>
-        
-        <div class="payments-grid">
-            <div class="payment-logo"><img src="bca.png" alt="BCA"></div>
-            <div class="payment-logo"><img src="mandiri.png" alt="MANDIRI"></div>
-            <div class="payment-logo"><img src="bri.png" alt="BRI"></div>
-            <div class="payment-logo"><img src="bni.png" alt="BNI"></div>
-            <div class="payment-logo"><img src="dana.png" alt="DANA"></div>
-            <div class="payment-logo"><img src="ovo.png" alt="OVO"></div>
-            <div class="payment-logo"><img src="gopay.png" alt="GOPAY"></div>
-            <div class="payment-logo"><img src="qris.png" alt="QRIS"></div>
-            <div class="payment-logo"><img src="shopeepay.png" alt="SHOPEEPAY"></div>
-        </div> 
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri">
+        <div class="container">
+            <h2>Galeri Kegiatan</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://picsum.photos/seed/kegiatan1/400/300" alt="Kegiatan Sekolah"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/kegiatan2/400/300" alt="Kegiatan Sekolah"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/kegiatan3/400/300" alt="Kegiatan Sekolah"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/kegiatan4/400/300" alt="Kegiatan Sekolah"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/kegiatan5/400/300" alt="Kegiatan Sekolah"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/kegiatan6/400/300" alt="Kegiatan Sekolah"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERITA -->
+    <section id="berita" class="news-section">
+        <div class="container">
+            <h2>Berita & Pengumuman</h2>
+            <div class="news-grid">
+                <div class="news-card" onclick="openNewsModal(1)">
+                    <div class="news-img"><img src="https://picsum.photos/seed/news1/400/300" alt="Berita Sekolah"><span class="news-date-badge">15 Mei 2024</span></div>
+                    <div class="news-content"><h3 class="news-title">Penerimaan Raport Kenaikan Kelas</h3><p class="news-desc">Pengambilan raport akan dilaksanakan pada hari Senin tanggal 20 Mei 2024.</p><span class="read-more">Baca Selengkapnya...</span></div>
+                </div>
+                <div class="news-card" onclick="openNewsModal(2)">
+                    <div class="news-img"><img src="https://picsum.photos/seed/news2/400/300" alt="Berita Sekolah"><span class="news-date-badge">17 Agustus 2024</span></div>
+                    <div class="news-content"><h3 class="news-title">Peringatan HUT RI ke-80</h3><p class="news-desc">Seluruh siswa dan guru SD Negeri 0207 Pangirkiran mengikuti upacara bendera dalam rangka memperingati Hari Kemerdekaan.</p><span class="read-more">Baca Selengkapnya...</span></div>
+                </div>
+                <div class="news-card" onclick="openNewsModal(3)">
+                    <div class="news-img"><img src="https://picsum.photos/seed/news3/400/300" alt="Berita Sekolah"><span class="news-date-badge">10 September 2024</span></div>
+                    <div class="news-content"><h3 class="news-title">Lomba Kebersihan Lingkungan</h3><p class="news-desc">Siswa SDN 0207 Pangirkiran mengikuti lomba kebersihan lingkungan tingkat kecamatan.</p><span class="read-more">Baca Selengkapnya...</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tautan Referensi -->
+    <section id="tautan" style="background-color: #fff;">
+        <div class="container">
+            <h2>Tautan Referensi</h2>
+            <p style="text-align: center;">Akses ke portal resmi Kementerian Pendidikan.</p>
+            <div class="link-grid">
+                <a href="https://dapo.kemendikdasmen.go.id/" target="_blank" class="link-card"><i class="fas fa-database link-icon"></i><span class="link-title">DAPO DIKDASMEN</span></a>
+                <a href="https://gurudikdas.dikdasmen.go.id/" target="_blank" class="link-card"><i class="fas fa-chalkboard-teacher link-icon"></i><span class="link-title">GURU DIKDASMEN</span></a>
+                <a href="https://kemendikdasmen.go.id/" target="_blank" class="link-card"><i class="fas fa-building link-icon"></i><span class="link-title">KEMENDIKDASMEN</span></a>
+                <a href="https://gtk.kemendikdasmen.go.id/" target="_blank" class="link-card"><i class="fas fa-users link-icon"></i><span class="link-title">GTK</span></a>
+                <a href="https://guru.kemendikdasmen.go.id/" target="_blank" class="link-card"><i class="fas fa-user-graduate link-icon"></i><span class="link-title">GURU KEMDIKBUD</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Peta -->
+    <section id="kontak" style="background-color: #fff;">
+        <div class="container">
+            <h2>Lokasi Sekolah</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps?q=1.366409,99.795892&hl=id&z=15&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catatan Kecil -->
+    <section id="catatan" class="note-creator">
+        <div class="container">
+            <i class="fas fa-code note-icon"></i>
+            <p><strong>Catatan Pembuat Situs</strong></p>
+            <p>Website ini dirancang, dibuat, dan dikembangkan oleh <strong style="color: var(--primary-color);">Sofyan Tanjung</strong> (Guru Mapel PJOK SD Negeri 0207 Pangirkiran).</p>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-info">
-            <h3>Yusuf Store 25</h3>
-            <p>Jln. Merdeka - Kantin, Kota Padang Sidimpuan, Sumatera Utara.</p>
-            <p>WA: 0813-7586-1195</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/yusufstore_25?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=https://sofyan180981-hue.github.io/yusufstore25/&left_color=%23e63946&right_color=%231d3557&style=for-the-badge" />
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>SDN 0207 Pangirkiran</h3>
+                    <p>Membentuk generasi penerus bangsa yang berkarakter, cerdas, dan berdaya saing global.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Kontak Kami</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Desa Pangirkiran Dolok, Kec. Barumun Tengah, Kab. Padang Lawas</li>
+                        <li><i class="fas fa-envelope"></i> sdn0211pangirkiran@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (Hubungi via Email)</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <ul style="line-height: 2;">
+                        <li><a href="#profil"><i class="fas fa-chevron-right"></i> Profil</a></li>
+                        <li><a href="#guru"><i class="fas fa-chevron-right"></i> Guru</a></li>
+                        <li><a href="#siswa"><i class="fas fa-chevron-right"></i> Data Siswa</a></li>
+                    </ul>
+                </div>
             </div>
-            <p style="margin-top: 20px; font-size: 0.8rem;">&copy; 2023 Yusuf Store 25. All Rights Reserved.</p>
+            <div class="copyright">
+                &copy; 2026 SD Negeri 0207 Pangirkiran. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
-    <!-- Modal Zoom -->
-    <div id="imgModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImg">
+    <!-- MODAL STRUKTUR (SISWA) -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h3 id="modalClassTitle">Daftar Siswa Kelas</h3>
+                <p id="modalCount" style="margin:0; color: #666;"></p>
+            </div>
+            <ul class="student-list" id="modalList"></ul>
+        </div>
     </div>
 
+    <!-- MODAL STRUKTUR (SARPRAS) -->
+    <div id="sarprasModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSarprasModal()">&times;</span>
+            <img id="sarprasImg" src="" alt="Foto Sarpras">
+            <div class="modal-header">
+                <h3 id="sarprasTitle">Judul Sarpras</h3>
+            </div>
+            <p id="sarprasDesc">Deskripsi sarpras akan muncul di sini.</p>
+        </div>
+    </div>
+
+    <!-- MODAL STRUKTUR (GURU) -->
+    <div id="guruModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeGuruModal()">&times;</span>
+            <div class="guru-modal-left">
+                <img id="guruModalImg" src="" alt="Foto Guru">
+                <h3 id="guruModalRole" style="color: var(--secondary-color); font-size: 1.2rem; margin-bottom: 5px;">Jabatan</h3>
+            </div>
+            <div class="guru-modal-right">
+                <div class="modal-header" style="border:none; padding: 0; margin: 0 0 20px 0;">
+                    <h3 id="guruModalName" style="font-size: 1.8rem;">Nama Lengkap</h3>
+                </div>
+                <ul class="guru-details-list">
+                    <li><i class="fas fa-birthday-cake"></i><div><strong>Tempat, Tanggal Lahir</strong><span id="guruModalTtl">Contoh: Padang Lawas, 12 Mei 1990</span></div></li>
+                    <li><i class="fas fa-graduation-cap"></i><div><strong>Pendidikan Terakhir</strong><span id="guruModalEdu">Contoh: S1 Pendidikan Guru SD</span></div></li>
+                    <li><i class="fas fa-school"></i><div><strong>Asal Sekolah</strong><span id="guruModalOrigin">Contoh: IKIP Padang</span></div></li>
+                    <li><i class="fas fa-map-marker-alt"></i><div><strong>Alamat</strong><span id="guruModalAddress">Contoh: Jl. Pendidikan No. 1, Pangirkiran Dolok</span></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL STRUKTUR (JADWAL) -->
+    <div id="scheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeScheduleModal()">&times;</span>
+            <div class="modal-header">
+                <h3 id="scheduleModalTitle">Jadwal Kelas</h3>
+                <p style="margin:0; color: #666;">Struktur: Jam (Vertikal) x Hari (Horizontal)</p>
+            </div>
+            <table class="schedule-table">
+                <thead><tr><th>Jam</th><th>Senin</th><th>Selasa</th><th>Rabu</th><th>Kamis</th><th>Jumat</th><th>Sabtu</th></tr></thead>
+                <tbody id="scheduleTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- MODAL STRUKTUR (BERITA) -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeNewsModal()">&times;</span>
+            <div class="modal-header">
+                <h3 id="newsModalTitle">Judul Berita</h3>
+                <span id="newsModalDate" style="font-size: 0.9rem; background: #eee; padding: 2px 8px; border-radius: 4px;"></span>
+            </div>
+            <p id="newsModalBody" style="color: #444; line-height: 1.6;">Isi berita lengkap...</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        function filterSelection(category) {
-            const cards = document.getElementsByClassName("product-card");
-            const btns = document.getElementsByClassName("filter-btn");
+        // --- DATA GURU (PROFIL LENGKAP) ---
+        const guruData = {
+            1: { name: "Warda Kembang Bunga Harahap", role: "Guru Kelas 3", img: "https://picsum.photos/seed/guru1/400/400", ttl: "Sihoda-Hoda
+, 03 Januari 1971", edu: "S1 PAI", origin: "STIT PL GUNUNG TUA
+", address: "Desa Pangirkiran Dolok,Kec.Barumun Tengah" },
+            2: { name: "Adanan Siregar", role: "Guru SBK", img: "https://picsum.photos/seed/guru2/400/400", ttl: "Binanga
+, 12 September 1967", edu: "SLTA", origin: "SPG", address: "Desa Binanga, Kec.Barumun Tengah" },
+            3: { name: "Sofyan Tanjung", role: "Guru Mapel PJOK", img: "https://picsum.photos/seed/guru3/400/400", ttl: "Batang Toru, 18 September 1981", edu: "S1 Pendidikan Olahraga", origin: "Universitas Negeri Medan", address: "Desa Pangirkiran Dolok, Kecamatan Barumun Tengah" },
+            4: { name: "Tirohima Harahap", role: "Guru Kelas 1", img: "https://picsum.photos/seed/guru4/400/400", ttl: "Aek Nabara Tonga
+, 24 November 1976", edu: "S1 PAI", origin: "STIT PL GUNUNG TUA", address: "Desa Pangirkiran Dolok, Kecamatan Barumun Tengah" },
+            5: { name: "Rokimah Siregar", role: "Guru Kelas 2", img: "https://picsum.photos/seed/guru5/400/400", ttl: "PP Makmur
+, 13 Agustus 1969", edu: "S1 PAI", origin: "STAIS Dairi Sidikalang", address: "Desa Pangirkiran Dolok, Kec. Barumun Tengah" },
+            6: { name: "Hotmaida Pohan", role: "Guru Kelas 4", img: "https://picsum.photos/seed/guru6/400/400", ttl: "Pasar Binanga
+, 08 Februari 1987", edu: "S1 PGSD", origin: "Universitas Negeri Medan", address: "Desa Pangirkiran Dolok, Kec. Barumun Tengah" },
+            7: { name: "Rosmina Tamba", role: "Guru Mapel PAI", img: "https://picsum.photos/seed/guru7/400/400", ttl: "Pangirkiran, 25 Oktober 1988", edu: "S1 Pendidikan Agama Islam", origin: "IAIN Padangsidimpuan", address: "Desa Gulangan, Kec. Sihapas Barumun" },
+            8: { name: "Nora Hanifah Pane", role: "Guru Kelas 6", img: "https://picsum.photos/seed/guru8/400/400", ttl: "Padang Matinggi, 10 Juni 1997", edu: "S1 Pendidikan BK", origin: "Universitas Muhammadiah Sumatera Utara", address: "Desa Padang Matinggi, Kec. Barumun Tengah" },
+            9: { name: "Rukiatul Marjulia Ujung", role: "Guru Kelas 5", img: "https://picsum.photos/seed/guru9/400/400", ttl: "Medan, 03 Maret 1996", edu: "S1 PGSD", origin: "Universitas NU Sumatera Utara", address: "Desa Padang Matinggi, Kec. Barumun Tengah" },
+            10: { name: "Syaroh Silitonga", role: "Guru Mapel B. Ing", img: "https://picsum.photos/seed/guru10/400/400", ttl: "Morang, 03 Oktober 1996", edu: "S1 PAI", origin: "IAIN Padangsidimpuan", address: "Pangirkiran Dolok, Kec. Barumun Tengah, " },
+            11: { name: "Siti Hoyriya Harahap", role: "Guru P5", img: "https://picsum.photos/seed/guru11/400/400", ttl: "Padang Lawas, 2 Februari 1993", edu: "S1 Bimbingan Konseling", origin: "Universitas Negeri Medan", address: "Jl. Sekolah No. 1" },
+            12: { name: "Romaito Harahap", role: "Guru Mapel Seni Tari", img: "https://picsum.photos/seed/guru12/400/400", ttl: "Padang Sidempuan, 20 Mei 1985", edu: "S1 Pendidikan Seni Tari", origin: "Institut Seni Indonesia", address: "Desa Pangirkiran Dolok" },
+            13: { name: "Muhammad Johan Pohan", role: "Penjaga Sekolah", img: "https://picsum.photos/seed/staf1/400/400", ttl: "Padang Lawas, 1 November1975", edu: "SMA Sederajat", origin: "SMA Negeri 1 Barumun", address: "Rumah Dinas Sekolah" }
+        };
 
-            for (let i = 0; i < btns.length; i++) {
-                btns[i].classList.remove("active");
-                if (btns[i].textContent.toLowerCase().includes(category) || 
-                   (category === 'all' && btns[i].textContent === 'Semua')) {
-                    btns[i].classList.add("active");
-                }
-            }
+        const sarprasData = {
+            1: { title: "Ruang Belajar", desc: "Ruang kelas yang luas, bersih, dan nyaman untuk mendukung kegiatan Belajar Mengajar (KBM) secara efektif.", img: "https://picsum.photos/seed/ruangbelajar/800/600" },
+            2: { title: "Ruang Guru", desc: "Tempat para guru untuk melakukan koordinasi, persiapan materi mengajar, dan istirahat sejenak.", img: "https://picsum.photos/seed/ruangguru/800/600" },
+            3: { title: "Perpustakaan", desc: "Gudang ilmu yang berisi ratusan koleksi buku pelajaran dan cerita untuk menunjang literasi dan minat baca para siswa.", img: "https://picsum.photos/seed/perpustakaan/800/600" },
+            4: { title: "Lab Komputer", desc: "Sarana pengenalan teknologi informasi bagi siswa. Dilengkapi dengan komputer desktop untuk pembelajaran TIK.", img: "https://picsum.photos/seed/komputer/800/600" },
+            5: { title: "Toilet Bersih", desc: "Fasilitas sanitasi yang bersih dan terjaga untuk guru maupun siswa, memastikan kesehatan dan kebersihan lingkungan sekolah.", img: "https://picsum.photos/seed/toilet/800/600" },
+            6: { title: "Lapangan Olahraga", desc: "Area terbuka luas untuk kegiatan olahraga, upacara bendera senin, dan kegiatan ekstrakurikuler seperti Pramuka.", img: "https://picsum.photos/seed/lapangan/800/600" }
+        };
 
-            for (let i = 0; i < cards.length; i++) {
-                if (category === "all") {
-                    cards[i].style.display = "block";
-                } else {
-                    if (cards[i].getAttribute("data-category") === category) {
-                        cards[i].style.display = "block";
-                    } else {
-                        cards[i].style.display = "none";
-                    }
-                }
-            }
-        }
+        const studentData = {
+            1: ["Adiba Ufairah Siregar", "Ahmad Ali Suten Harahap", "AHMAD PARTOMUAN DALIMUNTHE", "Alfiansyah Ramadhan Harahap", "Alif Syahbana Pohan", "ALIKA RAHMA DONGORAN", "Azfar Robbani", "Bintang Permata Indah Pohan", "BUNGA LESTARI SIREGAR", "Dimas Setiawan Pohan", "Ifra Mikayla Dongoran", "Isnandar Hakim Siregar", "Jepri Handika Pohan", "Muhammad Ramdan Alfarezel", "MUHAMMAD RISKY HASIBUAN", "Nilla Sari", "PAZRI AMINANSYAH POHAN", "Putri Irma Suryani Nasution", "RAFA HABIB POHAN", "Rosmiati Siregar", "VIOLA ARSA NASUTION", "NABILA AYUNDA TAMBA"],
+            2: ["AKRAM AL MUBAROK HARAHAP", "ALI NIKMAT SUANGKUPON POHAN", "AQILA PUTRI POHAN", "CLARASATI HARAHAP", "DANI ALRAID RAFIYAH HARAHAP", "NADIRA QISTY SIREGAR", "NASRUN HABIBISIREGAR", "NISFA RAHMADHANI POHAN", "NUR KHORIAH HASIBUAN", "NUR SYAHMA SIREGAR", "RAFLY KHOTIF SIREGAR", "ROSINTAN NASUTION", "ZAHIRA ALIFA SIREGAR"],
+            3: ["AHMAD YANI SIREGAR", "ALI ANSOR POHAN", "ALWY SYAHPUTRA HARAHAP", "AMIN SYAH PUTRA SIREGAR", "AMIRUDDIN HARAHAP", "ARSYA ADE MUHARRAM", "AYDIL ASMAN HARAHAP", "DARLENA HARAHAP", "DEWI SANTI POHAN", "FRISKA ARDILA", "GENA LAMSURI HARAHAP", "HAMZAH POHAN", "ISRAN P. SIREGAR", "JULIANA HARAHAP", "JULIANI HARAHAP", "LAMRO HARAHAP", "MUHAMMAD ALI RAMBE", "NUR INTAN POHAN", "NURI YANTI POHAN", "PUAN RAHMALIANA HASIBUAN", "RAJA MINTA ITO NASUTION", "RASI ADELIYANI HASIBUAN", "RISKA DELILAN SIREGAR", "SHAIMA PUTRI SIREGAR", "SYAHREL ARDIANSAH POHAN"],
+            4: ["ABDUL ALIM RAMADHAN PANE", "AIRIN ZAHRA SIREGAR", "AMIR SALIM HARAHAP", "AYU ROSMALINA POHAN", "FAHMI DZAKWAN POHAN", "GINDO MARTUA POHAN", "HAFNI RAISA SIREGAR", "HENDRA GUNAWAN SIREGAR", "IQBAL HABIBI SIREGAR", "KHILDAFATHMAH POHAN", "MUHAMMAD FADLY SIREGAR", "MUHAMMAD ROUF SIREGAR", "NUR KAMILA HARAHAP", "PUTRI RAHAYU SIREGAR", "RAJA DIMA PANDAWA SIREGAR", "SAIMA PUTRI HARAHAP", "SAKINAH MARWAH HASIBUAN", "SUCI NAPISAH POHAN", "SYAIR ZAIDAN POHAN", "ULFA AMELIA HARAHAP"],
+            5: ["ADINDA NURJIAH", "AFRIJAL SIREGAR", "AMRIL MUHAIMIN DONGORAN", "ANISA BALQIS HARAHAP", "ARIKA ZAHRA", "ARY PRATAMA HARAHAP", "DIRA NOVERIANI SIREGAR", "ERIN SAHRI", "GONG MATUA SIREGAR", "LAILA SERLINA HARAHAP", "MASLIANI SIREGAR", "NUR AZIJAH HARAHAP", "NURUL HAFIZA TAMBA", "RAHMAT HORIZON DONGORAN", "RAISAH POHAN", "SAFARUDDIN NASUTION"],
+            6: ["AGUNG GUNAWAN POHAN", "AHMAD YUNAN POHAN", "ALDO SAPUTRA SIREGAR", "ALI NURDIN SIREGAR", "Aqilah Azahra Nasution", "AZKIA ROMINDA SIREGAR", "BAYAN PARULIAN SIREGAR", "DERHANA POHAN", "DHAFITHA NUR AZIZAH HASIBUAN", "DZUL FAKHRI TAMBA", "FERIYANTO", "FITRI HANDAYANI HARAHAP", "INDAH DWI FITRI POHAN", "ISAR MARTUA POHAN", "ISRA AMALIA RIZKY SIREGAR", "NURSAHADA HARAHAP", "PUTRI ASYIPA DONGORAN", "RAFIQI HAMLAN SIREGAR", "RINI HARAHAP", "SALSABILA NADIFA POHAN", "UMMI HIDAYAH POHAN", "YAHDIL PRATAMA HARAHAP"]
+        };
 
-        function openModal(element) {
-            const modal = document.getElementById("imgModal");
-            const modalImg = document.getElementById("modalImg");
-            const img = element.querySelector("img");
+        const newsData = {
+            1: { title: "Penerimaan Raport Kenaikan Kelas", date: "15 Mei 2024", body: "Pengambilan raport akan dilaksanakan pada hari Senin tanggal 20 Mei 2024." },
+            2: { title: "Peringatan HUT RI ke-80", date: "17 Agustus 2025", body: "Seluruh siswa dan guru SD Negeri 0207 Pangirkiran mengikuti upacara bendera dalam rangka memperingati Hari Kemerdekaan." },
+            3: { title: "Lomba Kebersihan Lingkungan", date: "10 September 2024", body: "Alhamdulillah, siswa-siswa SDN 0207 Pangirkiran berhasil meraih Juara 3 dalam lomba kebersihan lingkungan tingkat kecamatan." }
+        };
+
+        // --- DATA ROSTER JADWAL (UPDATED STRUCTURE) ---
+        // Struktur Data Baru: Jam sebagai elemen array, hari sebagai properti
+        const scheduleData = {
+            1: [ 
+                { jam: "1", senin: "PKN", selasa: "B.INDO", rabu: "PKN", kamis: "B.INDO", jumat: "PJOK", sabtu: "MTK" },
+                { jam: "2", senin: "PKN", selasa: "B.INDO", rabu: "PKN", kamis: "B.INDO", jumat: "PJOK", sabtu: "MTK" },
+                { jam: "3", senin: "PAI", selasa: "MTK", rabu: "PKN/P5", kamis: "MTK", jumat: "PJOK", sabtu: "B.INGGRIS" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "4", senin: "PAI", selasa: "MTK", rabu: "B.INDO", kamis: "MTK/P5", jumat: "PJOK/P5", sabtu: "B.INGGRIS" },
+                { jam: "5", senin: "PAI", selasa: "SBDP", rabu: "B.INDO", kamis: "B.INDO", jumat: "SBDP", sabtu: "SBDP/P5" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "6", senin: "PAI/P5", selasa: "SBDP", rabu: "B.INDO/P5", kamis: "B.INDO/P5", jumat: "", sabtu: "" }
+            ],
+            2: [ 
+                { jam: "1", senin: "PKN", selasa: "PJOK", rabu: "B.INDO", kamis: "MTK", jumat: "PAI", sabtu: "B.INDO" },
+                { jam: "2", senin: "PKN", selasa: "PJOK", rabu: "B.INDO", kamis: "MTK", jumat: "PAI", sabtu: "B.INDO/P5" },
+                { jam: "3", senin: "PKN/P5", selasa: "PJOK", rabu: "B.INDO", kamis: "MTK", jumat: "PAI", sabtu: "B.INDO/P5" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "4", senin: "B.INDO", selasa: "PJOK/P5", rabu: "MTK", kamis: "B.INGGRIS", jumat: "PAI/P5", sabtu: "SBDP" },
+                { jam: "5", senin: "B.INDO", selasa: "PKN", rabu: "MTK", kamis: "B.INGGRIS", jumat: "SBDP", sabtu: "SBDP/P5" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "6", senin: "B.INDO", selasa: "PKN", rabu: "MTK/P5", kamis: "SBDP", jumat: "", sabtu: "" }
+            ],
+            3: [
+                { jam: "1", senin: "MTK", selasa: "PKN", rabu: "PKN", kamis: "SBDP", jumat: "PKN", sabtu: "PJOK" },
+                { jam: "2", senin: "MTK", selasa: "PKN", rabu: "PKN", kamis: "SBDP", jumat: "PKN", sabtu: "PJOK" },
+                { jam: "3", senin: "MTK", selasa: "B.INGGRIS", rabu: "B.INDO", kamis: "MTK", jumat: "PKN", sabtu: "PJOK" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "4", senin: "IPAS", selasa: "B.INGGRIS", rabu: "PAI", kamis: "B.INDO", jumat: "SBDP", sabtu: "PJOK" },
+                { jam: "5", senin: "IPAS", selasa: "MTK", rabu: "PAI", kamis: "B.INDO", jumat: "SBDP", sabtu: "IPAS" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "6", senin: "B.INDO", selasa: "MTK", rabu: "PAI", kamis: "IPAS", jumat: "B.INDO", sabtu: "" },
+                { jam: "7", senin: "B.INDO", selasa: "MTK", rabu: "PAI", kamis: "IPAS", jumat: "B.INDO", sabtu: "" }
+            ],
+            4: [
+                { jam: "1", senin: "B.INGGRIS", selasa: "MTK", rabu: "PJOK", kamis: "PKN", jumat: "IPAS", sabtu: "SBDP" },
+                { jam: "2", senin: "B.INGGRIS", selasa: "MTK", rabu: "PJOK", kamis: "PKN/P5", jumat: "IPAS", sabtu: "SBDP/P5" },
+                { jam: "3", senin: "PKN", selasa: "MTK", rabu: "PJOK", kamis: "B.INDO", jumat: "MTK", sabtu: "B.INDO" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "4", senin: "PKN", selasa: "PAI", rabu: "PJOK/P5", kamis: "B.INDO/P5", jumat: "MTK", sabtu: "B.INDO" },
+                { jam: "5", senin: "PKN", selasa: "PAI", rabu: "B.INDO", kamis: "IPAS", jumat: "MTK/P5", sabtu: "B.INDO" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "6", senin: "SBDP", selasa: "PAI", rabu: "B.INDO", kamis: "IPAS", jumat: "", sabtu: "" },
+                { jam: "7", senin: "SBDP", selasa: "PAI/P5", rabu: "B.INDO/P5", kamis: "IPAS", jumat: "", sabtu: "" }
+            ],
+            5: [
+                { jam: "1", senin: "PKN", selasa: "B.INGGRIS", rabu: "B.INDO", kamis: "PJOK", jumat: "B.INDO/P5", sabtu: "B.INGGRIS" },
+                { jam: "2", senin: "PKN", selasa: "IPAS", rabu: "B.INDO", kamis: "PJOK", jumat: "B.INDO/P5", sabtu: "PAI" },
+                { jam: "3", senin: "PKN", selasa: "MTK", rabu: "IPAS", kamis: "PJOK", jumat: "MTK", sabtu: "PAI" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "4", senin: "B.INDO", selasa: "MTK", rabu: "IPAS", kamis: "PJOK/P5", jumat: "MTK/P5", sabtu: "PAI/P5" },
+                { jam: "5", senin: "B.INDO", selasa: "MTK", rabu: "SBDP", kamis: "B.INDO", jumat: "MTK/P5", sabtu: "PAI/P5" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "6", senin: "IPAS", selasa: "PKN", rabu: "SBDP", kamis: "B.INDO", jumat: "", sabtu: "" },
+                { jam: "7", senin: "IPAS", selasa: "PKN/P5", rabu: "SBDP", kamis: "SBDP/P5", jumat: "", sabtu: "" }
+            ],
+            6: [
+                { jam: "1", senin: "PJOK", selasa: "MTK", rabu: "B.INDO", kamis: "B.INGGRIS", jumat: "MTK", sabtu: "IPAS" },
+                { jam: "2", senin: "PJOK", selasa: "MTK", rabu: "B.INDO", kamis: "B.INGGRIS", jumat: "MTK", sabtu: "IPAS" },
+                { jam: "3", senin: "PJOK", selasa: "MTK", rabu: "B.INDO", kamis: "SBDP", jumat: "MTK", sabtu: "IPAS" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "4", senin: "PJOK", selasa: "B.INDO", rabu: "IPAS", kamis: "PAI", jumat: "IPAS", sabtu: "B.INDO" },
+                { jam: "5", senin: "PKN", selasa: "B.INDO", rabu: "IPAS", kamis: "PAI", jumat: "SBDP", sabtu: "B.INDO" },
+                { jam: "ISTIRAHAT", senin: "", selasa: "", rabu: "", kamis: "", jumat: "", sabtu: "" },
+                { jam: "6", senin: "PKN", selasa: "SBDP", rabu: "PKN", kamis: "PAI", jumat: "", sabtu: "" },
+                { jam: "7", senin: "PKN", selasa: "SBDP", rabu: "PKN", kamis: "PAI", jumat: "", sabtu: "" }
+            ]
+        };
+
+        // --- FUNGSI SISWA ---
+        const modal = document.getElementById("studentModal");
+        const modalTitle = document.getElementById("modalClassTitle");
+        const modalCount = document.getElementById("modalCount");
+        const modalList = document.getElementById("modalList");
+
+        function openModal(classNumber) {
+            const students = studentData[classNumber];
+            modalTitle.innerText = `Daftar Siswa Kelas ${classNumber}`;
+            modalCount.innerText = `Jumlah: ${students.length} Siswa`;
+            modalList.innerHTML = "";
+            students.forEach(name => {
+                const li = document.createElement("li");
+                li.textContent = name;
+                modalList.appendChild(li);
+            });
             modal.style.display = "flex";
-            modalImg.src = img.src;
         }
+        function closeModal() { modal.style.display = "none"; }
 
-        function closeModal() {
-            document.getElementById("imgModal").style.display = "none";
+        // --- FUNGSI SARPRAS ---
+        const sarprasModal = document.getElementById("sarprasModal");
+        function openSarprasModal(id) {
+            const data = sarprasData[id];
+            document.getElementById("sarprasTitle").innerText = data.title;
+            document.getElementById("sarprasDesc").innerText = data.desc;
+            document.getElementById("sarprasImg").src = data.img;
+            sarprasModal.style.display = "flex";
         }
+        function closeSarprasModal() { sarprasModal.style.display = "none"; }
 
+        // --- FUNGSI GURU ---
+        const guruModal = document.getElementById("guruModal");
+        function openGuruModal(id) {
+            const data = guruData[id];
+            document.getElementById("guruModalImg").src = data.img;
+            document.getElementById("guruModalName").innerText = data.name;
+            document.getElementById("guruModalRole").innerText = data.role;
+            document.getElementById("guruModalTtl").innerText = data.ttl;
+            document.getElementById("guruModalEdu").innerText = data.edu;
+            document.getElementById("guruModalOrigin").innerText = data.origin;
+            document.getElementById("guruModalAddress").innerText = data.address;
+            guruModal.style.display = "flex";
+        }
+        function closeGuruModal() { guruModal.style.display = "none"; }
+
+        // --- FUNGSI JADWAL (UPDATED) ---
+        const scheduleModal = document.getElementById("scheduleModal");
+        const scheduleTitle = document.getElementById("scheduleModalTitle");
+        const scheduleBody = document.getElementById("scheduleTableBody");
+
+        function openScheduleModal(kelasId) {
+            const schedule = scheduleData[kelasId];
+            scheduleTitle.innerText = `Jadwal Pelajaran Kelas ${kelasId}`;
+            scheduleBody.innerHTML = "";
+            schedule.forEach(row => {
+                const tr = document.createElement("tr");
+                // Mengubah struktur tr agar kolomnya menyesuaikan Jam ke Hari
+                // Kolom 1: Jam, Kolom 2: Senin, ... Kolom 8: Sabtu
+                tr.innerHTML = `<td>${row.jam}</td><td>${row.senin}</td><td>${row.selasa}</td><td>${row.rabu}</td><td>${row.kamis}</td><td>${row.jumat}</td><td>${row.sabtu}</td>`;
+                scheduleBody.appendChild(tr);
+            });
+            scheduleModal.style.display = "flex";
+        }
+        function closeScheduleModal() { scheduleModal.style.display = "none"; }
+
+        // --- FUNGSI BERITA ---
+        const newsModal = document.getElementById("newsModal");
+        const newsTitle = document.getElementById("newsModalTitle");
+        const newsDate = document.getElementById("newsModalDate");
+        const newsBody = document.getElementById("newsModalBody");
+
+        function openNewsModal(newsId) {
+            const data = newsData[newsId];
+            newsTitle.innerText = data.title;
+            newsDate.innerText = data.date;
+            newsBody.innerText = data.body;
+            newsModal.style.display = "flex";
+        }
+        function closeNewsModal() { newsModal.style.display = "none"; }
+
+        // --- TUTUP MODAL ---
         window.onclick = function(event) {
-            const modal = document.getElementById("imgModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+            if (event.target == modal) closeModal();
+            if (event.target == sarprasModal) closeSarprasModal();
+            if (event.target == guruModal) closeGuruModal();
+            if (event.target == scheduleModal) closeScheduleModal();
+            if (event.target == newsModal) closeNewsModal();
         }
 
-        function cekOngkir(e) {
-            e.preventDefault();
-            const kota = document.getElementById("kota-tujuan").value;
-            const kurir = document.getElementById("kurir").value;
-            const pesan = `Halo Admin Yusuf Store 25, saya mau cek ongkir ke: *${kota}* via ${kurir}. Mohon infonya ya.`;
-            const url = `https://wa.me/6281375861195?text=${encodeURIComponent(pesan)}`;
-            window.open(url, '_blank');
+        // --- Mobile Menu ---
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.classList.toggle("active");
         }
-
-        // --- TAMBAHKan FUNGSI BARU (FILTER BY BRAND) ---
-        function filterByBrand(brandName) {
-            const cards = document.getElementsByClassName("product-card");
-            
-            // Loop semua produk
-            for (let i = 0; i < cards.length; i++) {
-                // Ambil judul produk
-                const titleElement = cards[i].querySelector(".product-title");
-                
-                if (titleElement) {
-                    const titleText = titleElement.innerText.toLowerCase();
-                    const brand = brandName.toLowerCase();
-                    
-                    // Cek apakah judul produk mengandung nama merek
-                    if (titleText.includes(brand)) {
-                        cards[i].style.display = "block"; // Tampilkan jika cocok
-                    } else {
-                        cards[i].style.display = "none";  // Sembunyikan jika tidak cocok
-                    }
-                }
-            }
-            
-            // Gulir otomatis ke bagian katalog
-            document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});
+        function closeMenu() {
+            document.getElementById("navLinks").classList.remove("active");
         }
-        // -----------------------------------
-
-        // --- FUNGSI PENCARIAN (SEARCH) ---
-        function searchProduct() {
-            // 1. Ambil teks yang diketik user (diubah jadi huruf kecil)
-            const input = document.getElementById("searchInput").value.toLowerCase();
-            
-            // 2. Ambil semua kartu produk
-            const cards = document.getElementsByClassName("product-card");
-            
-            for (let i = 0; i < cards.length; i++) {
-                // Ambil Judul dan Kategori
-                const titleElement = cards[i].querySelector(".product-title");
-                const categoryElement = cards[i].querySelector(".product-category");
-                
-                if (titleElement && categoryElement) {
-                    const titleText = titleElement.innerText.toLowerCase();
-                    const categoryText = categoryElement.innerText.toLowerCase();
-                    
-                    // 3. Cek apakah Judul atau Kategori mengandung kata kunci pencarian
-                    if (titleText.includes(input) || categoryText.includes(input)) {
-                        cards[i].style.display = "block"; // Tampilkan jika cocok
-                    } else {
-                        cards[i].style.display = "none";  // Sembunyikan jika tidak cocok
-                    }
-                }
-            }
-        }
-        // ------------------------------------
     </script>
 </body>
-
 </html>
-
-
