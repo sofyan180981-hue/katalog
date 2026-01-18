@@ -685,12 +685,16 @@
                             <option value="Jam Tangan">Jam Tangan</option>
                         </select>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex gap-4 flex-wrap">
                         <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
                             <input type="checkbox" id="addIsOriginal" class="accent-accent"> Original
                         </label>
                         <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
                             <input type="checkbox" id="addIsSold" class="accent-red-500"> Sold Out
+                        </label>
+                        <!-- Checkbox Baru PO -->
+                        <label class="flex items-center gap-2 text-sm text-gray-400 cursor-pointer">
+                            <input type="checkbox" id="addIsPO" class="accent-yellow-500"> Pre-Order (PO)
                         </label>
                     </div>
                     <input type="number" id="addPrice" required class="w-full bg-black border border-zinc-700 p-3 rounded text-white text-sm focus:border-accent outline-none" placeholder="Harga Jual">
@@ -2005,7 +2009,12 @@ let products = [
                         </div>
                     </div>
                     <div class="flex items-center gap-2">
-                        <!-- TOMBOL TOGGLE STATUS -->
+                        <!-- TOMBOL TOGGLE STATUS PO -->
+                        <button onclick="togglePO(${p.id})" class="${p.isPO ? 'bg-yellow-100 text-yellow-600 border-yellow-200' : 'bg-gray-200 text-gray-500 border-gray-300'} border px-2 py-1 rounded text-[10px] font-bold w-12 text-center transition hover:shadow-sm" title="Ubah ke PO / Ready">
+                            ${p.isPO ? 'PO' : 'RDY'}
+                        </button>
+
+                        <!-- TOMBOL TOGGLE STATUS SOLD -->
                         <button onclick="toggleSold(${p.id})" class="${p.sold ? 'bg-red-100 text-red-600 border-red-200' : 'bg-green-100 text-green-600 border-green-200'} border px-2 py-1 rounded text-[10px] font-bold w-16 text-center transition hover:shadow-sm" title="Klik untuk ubah status">
                             ${p.sold ? 'SOLD' : 'READY'}
                         </button>
@@ -2024,14 +2033,21 @@ let products = [
             const product = products.find(p => p.id === id);
             if (product) {
                 product.sold = !product.sold; // Balik nilai true/false
-                
-                // Update UI Web Utama
-                renderProducts(products); // Akan reset filter, tapi tidak masalah
-                
-                // Update UI Admin
+                renderProducts(products); 
                 renderAdminProductList();
+                updateCodeArea();
+            }
+        }
+
+        // Fungsi Ubah Status PO
+        function togglePO(id) {
+            const product = products.find(p => p.id === id);
+            if (product) {
+                // Jika properti isPO belum ada, anggap false lalu ubah jadi true. Jika sudah ada, toggle nilainya.
+                product.isPO = !product.isPO;
                 
-                // Update Kode Generator
+                renderProducts(products); 
+                renderAdminProductList();
                 updateCodeArea();
             }
         }
@@ -2068,6 +2084,7 @@ let products = [
             const img = document.getElementById('addImg').value;
             const isOriginal = document.getElementById('addIsOriginal').checked;
             const isSold = document.getElementById('addIsSold').checked;
+            const isPO = document.getElementById('addIsPO').checked; // Ambil nilai checkbox PO
             
             const newId = Math.floor(Math.random() * 10000) + 100;
 
@@ -2079,7 +2096,8 @@ let products = [
                 price: parseInt(price), 
                 img: img, 
                 sold: isSold,
-                isOriginal: isOriginal
+                isOriginal: isOriginal,
+                isPO: isPO // Simpan status PO
             };
 
             // Tambahkan originalPrice jika diisi
@@ -2213,14 +2231,22 @@ let products = [
                 const imgStyle = product.sold ? 'grayscale opacity-75' : '';
                 const contentStyle = product.sold ? 'opacity-60' : '';
 
-                const btnAction = product.sold 
-                    ? `<button disabled class="w-full bg-gray-400 text-white py-2 rounded font-bold cursor-not-allowed text-sm">TERJUAL / SOLD</button>`
-                    : `<a href="https://wa.me/6281375861195?text=Halo Yusuf Store 25, saya mau beli ${product.name} Brand ${product.brand} apakah masih ada?" target="_blank" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded font-bold text-sm transition"><i class="fab fa-whatsapp"></i> Beli via WA</a>`;
+                // LOGIKA TOMBOL & PESAN WA
+                let btnAction;
+                if (product.sold) {
+                    btnAction = `<button disabled class="w-full bg-gray-400 text-white py-2 rounded font-bold cursor-not-allowed text-sm">TERJUAL / SOLD</button>`;
+                } else if (product.isPO) {
+                    btnAction = `<a href="https://wa.me/6281375861195?text=Halo Yusuf Store 25, saya mau pesan Pre-Order (PO) ${product.name} Brand ${product.brand} apakah bisa?" target="_blank" class="block w-full text-center bg-yellow-500 hover:bg-yellow-600 text-black py-2 rounded font-bold text-sm transition"><i class="fab fa-whatsapp"></i> Pesan PO</a>`;
+                } else {
+                    btnAction = `<a href="https://wa.me/6281375861195?text=Halo Yusuf Store 25, saya mau beli ${product.name} Brand ${product.brand} apakah masih ada?" target="_blank" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded font-bold text-sm transition"><i class="fab fa-whatsapp"></i> Beli via WA</a>`;
+                }
                 
                 let negoTextHTML = '';
                 if (!product.sold) {
                     if (product.isOriginal) {
                         negoTextHTML = '<p class="text-[10px] text-blue-600 font-semibold mt-1"><i class="fas fa-check-circle"></i> Harga Resmi</p>';
+                    } else if (product.isPO) {
+                        negoTextHTML = '<p class="text-[10px] text-yellow-600 italic mt-1 font-bold">Barang Pre-Order (Estimasi chat admin)</p>';
                     } else {
                         negoTextHTML = '<p class="text-[10px] text-green-600 italic mt-1">Harga masih bisa nego chat admin</p>';
                     }
@@ -2248,7 +2274,10 @@ let products = [
                         <div class="relative group cursor-pointer" onclick="openModal(${product.id})">
                             <img src="${product.img}" alt="${product.name}" class="w-full h-40 md:h-56 object-cover ${imgStyle}">
                             
-                            ${product.sold ? '<div class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold shadow-md z-20">SOLD OUT</div>' : ''}
+                            ${product.sold 
+                                ? '<div class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-bold shadow-md z-20">SOLD OUT</div>' 
+                                : (product.isPO ? '<div class="absolute top-2 right-2 bg-yellow-500 text-black text-xs px-2 py-1 rounded font-bold shadow-md z-20">PRE-ORDER</div>' : '')
+                            }
                             
                             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition flex items-center justify-center z-10">
                                 <span class="opacity-0 group-hover:opacity-100 bg-white text-black text-xs px-3 py-1 rounded-full shadow-lg transform scale-90 group-hover:scale-100 transition"><i class="fas fa-search-plus"></i> Detail</span>
@@ -2421,12 +2450,3 @@ let products = [
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
